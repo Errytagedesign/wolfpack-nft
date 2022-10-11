@@ -3,8 +3,10 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // components
+import { NavBar, HomePage } from "./components/exports/allComps";
 
 // style
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "aos/dist/aos.css";
 
@@ -15,13 +17,15 @@ function App() {
   }, [AOS]);
   return (
     <div className="App">
-      {" "}
-      hello wolfpack
-      <header></header>
+      <Router>
+        <header>
+          <NavBar />
+        </header>
+      </Router>
       <main>
         <Router>
           <Routes>
-            <Route />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </Router>
       </main>

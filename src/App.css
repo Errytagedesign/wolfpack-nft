@@ -1,3 +1,160 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ======Start of Variables========= */
+:root {
+  --primary-color: #4ebd00;
+  --accent-color: #eac306;
+  --info-color: #2f80ed;
+  --success-color: #27ae60;
+  --warning-color: #e2b93b;
+  --error-color: #eb5757;
+  --gradient-color: linear-gradient(
+    121.58deg,
+    #9cff4e 0%,
+    #9cff4e 56.54%,
+    #eac306 101.31%,
+    #9cff4e 149.78%
+  );
+
+  --btn-gradient: linear-gradient(122.56deg, #eac306 0%, #4ebd00 100%);
+
+  --white: #fff;
+  --trans-white: #ffffff1a;
+  --black: #231e1e;
+  --heading1: 48px;
+  --caption: 32px;
+  --large-body: 24px;
+  --body: 16px;
+}
+
+/* ======End of Variables========= */
+
+/* ======Start of Buttons========= */
+
+button {
+  border: none;
+}
+
+.btn-white {
+  background: var(--btn-gradient);
+  color: var(--white);
+  border-radius: 20px;
+}
+
+.btn-black {
+  background: var(--btn-gradient);
+  color: var(--black);
+  border-radius: 20px;
+}
+
+.btn-outline {
+  border: solid 2px var(--btn-gradient);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px 80px;
+}
+
+.btn-secondary {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px 80px;
+}
+
+.btn-small {
+  padding: 16px 80px;
+  font-size: 14px;
+}
+
+.btn-normal {
+  padding: 8px 20px;
+  font-size: 20px;
+}
+
+.btn-medium {
+  padding: 18px 90px;
+  font-size: 18px;
+}
+
+.btn-large {
+  padding: 20px 100px;
+  font-size: 20px;
+}
+
+.btn-active {
+  background: var(--btn-gradient);
+  color: var(--white);
+}
+
+.Btn:hover {
+  background: #9cff4e;
+  color: #000;
+}
+
+/* ======End of Buttons========= */
+
+/* ======Start of General Styles ========= */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
 .App {
   text-align: center;
+  overflow: hidden;
 }
+
+header {
+  position: fixed;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--white);
+}
+/* ======Endof General Styles ========= */
+
+/* ======Start of Images ========= */
+
+img {
+  width: 100%;
+
+  transition: all 0.3s;
+  animation: animateallPic 0.5s;
+}
+
+img:hover {
+  opacity: 0.8;
+}
+
+@keyframes animateallPic {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ======End of Images ========= */
