@@ -10,27 +10,6 @@ import "./NavBar.scss";
 // images
 import images from "../exports/images";
 
-// nav link data, and map through it
-// const NavLinkData = [
-//   { title: "Explore", icon: <BsChevronDown /> },
-//   { name: "Mint NFT", pic: images.MintNft },
-//   { name: "Ivory Savings", pic: images.Ivory },
-//   { name: "Crypto Gift Card", pic: images.CryptoGift },
-//   { name: "NFC Saving Promo", pic: images.NfcSaving },
-//   { name: "Defi Calendar", pic: images.DefiCalendar },
-//   { name: "Dox.me", pic: images.Dox },
-//   { name: "Music NFT", pic: images.MusciNft },
-
-//   { title: "Stats", icon: <BsChevronDown /> },
-//   { name: "Top APY", pic: images.TopApy },
-//   { name: "Trending", pic: images.Trending },
-
-//   { title: "Asset", icon: <BsChevronDown /> },
-//   { name: "White Paper", pic: images.WhitePaper },
-//   { name: "Mint Process", pic: images.MintProcess },
-//   { name: "Help Center", pic: images.HelpCenter },
-// ];
-
 function NavBar() {
   const [navbar, setNavbar] = useState(true);
 
@@ -132,10 +111,10 @@ function NavBar() {
               </div>
               <div>
                 {" "}
-                <button className="Btn btn-black btn-normal m-3">
-                  {" "}
+                <Link className="Btn btn-black btn-normal m-3 d-flex flex-row align-items-center">
+                  <img src={images.Walleticon} alt="" />
                   Connect Wallet{" "}
-                </button>
+                </Link>
               </div>
             </section>
           </aside>

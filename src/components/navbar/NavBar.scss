@@ -11,6 +11,14 @@
         color: var(--white);
       }
     }
+
+    .Btn {
+      font-size: 16px;
+      img {
+        width: 12%;
+      }
+    }
+
     .nav-items {
       color: var(--white);
       font-size: 20px;
@@ -27,7 +35,7 @@
         display: none;
         transition: all 0.5s ease-in-out;
         width: 100%;
-        z-index: 5;
+        z-index: 15;
 
         .dropdown-list-items {
           border-bottom: solid 1px #ffffff66;
@@ -43,6 +51,10 @@
             width: 20%;
             margin-right: 5px;
           }
+
+          &:hover {
+            background-color: #ffffff66;
+          }
         }
       }
 
@@ -57,6 +69,7 @@
           padding: 0.5em 0;
           width: 100%;
           transition: all 0.3s ease-in-out;
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
 
           @media screen and (max-width: 860px) {
             background-color: rgba(0, 0, 0, 0.8);

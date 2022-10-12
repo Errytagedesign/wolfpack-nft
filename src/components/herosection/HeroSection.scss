@@ -1,4 +1,161 @@
-main {
+.hero {
   background: black url("../../assets/images/hero-bg.svg") no-repeat top;
-  padding: 500px;
+  background-size: cover;
+  height: 100vh;
+  padding: 100px 20px;
+  position: relative;
+
+  .hero-header {
+    position: relative;
+    z-index: 7;
+  }
+
+  .spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -500px;
+    left: 260px;
+    text-align: center;
+    width: 100%;
+    padding: 3em;
+    z-index: 0;
+    height: inherit;
+    // background-color: red;
+
+    .circle {
+      text-align: center;
+      position: absolute;
+
+      img {
+        margin: auto;
+        display: block;
+        width: 80%;
+      }
+
+      @media screen and (max-width: 500px) {
+        &:nth-child(1) {
+          width: 50%;
+        }
+
+        &:nth-child(2) {
+          width: 65%;
+        }
+        &:nth-child(3) {
+          width: 80%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 890px) {
+      top: 0;
+      left: -400px;
+      width: 200%;
+    }
+
+    @media screen and (max-width: 500px) {
+      top: -50px;
+      left: -4.5em;
+      width: 150%;
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    text-align: center;
+    height: auto;
+  }
+
+  div {
+    .title-container {
+      padding: 2em 0;
+      h2 {
+        font-size: 55px;
+        margin: 2em 0 0.5em;
+        font-weight: 700;
+        // padding: 2em 0;
+        color: var(--white);
+        @media screen and (max-width: 768px) {
+          font-size: 40px;
+          margin: 0.5em 0 1em;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 24px;
+          // margin: 0.5em 0 1em;
+        }
+      }
+    }
+
+    .slider-mobile {
+      width: 80%;
+      margin: auto;
+
+      text-align: center;
+      img {
+        display: block;
+        margin: auto;
+        width: 100%;
+      }
+    }
+
+    .Nft-container {
+      padding: 2em 0;
+      position: relative;
+      // background-color: red;
+      text-align: center;
+      margin: 9em 0 0;
+      display: flex;
+      align-items: center;
+      // overflow-x: hidden;
+      z-index: 5;
+
+      @media screen and (max-width: 890px) {
+        display: none;
+      }
+      img {
+        position: absolute;
+        transition: all 0.5s ease-in;
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.5s ease-in;
+        }
+
+        &:nth-child(1) {
+          top: 50px;
+          right: -20px;
+          width: 45%;
+          &:hover {
+            transform: rotate(-20deg);
+            width: 75%;
+            opacity: 1;
+            z-index: 2;
+          }
+        }
+        &:nth-child(2) {
+          top: 50px;
+          width: 45%;
+          left: 0;
+          &:hover {
+            transform: rotate(20deg);
+            width: 75%;
+            opacity: 1;
+            z-index: 2;
+          }
+        }
+        &:nth-child(3) {
+          width: 50%;
+          right: 120px;
+
+          @media screen and (max-width: 768px) {
+            top: 10px;
+          }
+          &:hover {
+            width: 55%;
+            // opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

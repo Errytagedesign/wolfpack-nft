@@ -5,7 +5,7 @@ import { HeroSection } from "../../components/exports/allComps";
 
 function HomePage() {
   return (
-    <div className="container ">
+    <div className=" ">
       <HeroSection />
     </div>
   );
