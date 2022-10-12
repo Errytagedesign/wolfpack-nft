@@ -37,9 +37,11 @@ function HeroSection() {
 
         {/* NFT collectibles for web screen */}
         <section className=" Nft-container col-12 col-md-6">
-          <img src={images.NftCard2} alt="wolfpackherd nft" />
+          <img src={images.heronft} alt="wolfpackherd nft" />
+
+          {/* <img src={images.NftCard2} alt="wolfpackherd nft" />
           <img src={images.NftCard1} alt="wolfpackherd nft" />
-          <img src={images.NftCard3} alt="wolfpackherd nft" />
+          <img src={images.NftCard3} alt="wolfpackherd nft" /> */}
         </section>
 
         {/* NFT collectibles for mobile screen */}

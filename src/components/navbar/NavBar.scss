@@ -3,7 +3,7 @@
   // padding: 0.8em 0;
   background-color: #ffffff0f;
   nav {
-    padding: 0.8em 0;
+    // padding: 0.8em 0;
     backdrop-filter: blur(15px) brightness(0.9);
     -webkit-backdrop-filter: blur(15px) brightness(0.9);
     .logo {
@@ -29,7 +29,7 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       margin-right: 20px;
-
+      padding: 1em 0;
       .dropdown-lists {
         position: absolute;
         top: 50px;
@@ -44,13 +44,15 @@
           padding: 0.5em 1em;
           display: flex;
           text-align: left;
-          font-size: 12px;
+          font-size: 16px;
           width: 100%;
+          border-radius: 20px;
+
           &:last-child {
             border-bottom: none;
           }
           img {
-            width: 20%;
+            width: 10%;
             margin-right: 5px;
           }
 
@@ -64,14 +66,17 @@
         transition: all 0.5s ease-in-out;
 
         .dropdown-lists {
-          background-color: var(--trans-white);
+          background-color: var(--dark-green);
           display: flex;
+          position: absolute;
+          top: 84px;
+          font-size: 16px;
           flex-direction: column;
           border-radius: 20px;
           padding: 0.5em 0;
-          width: 100%;
+          width: 250px;
           transition: all 0.3s ease-in-out;
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
+          // box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
 
           @media screen and (max-width: 860px) {
             background-color: rgba(0, 0, 0, 0.8);

@@ -4,7 +4,7 @@
   height: 100vh;
   padding: 100px 20px;
   position: relative;
-
+  overflow-y: hidden;
   .hero-header {
     position: relative;
     z-index: 7;
@@ -100,7 +100,7 @@
     }
 
     .Nft-container {
-      padding: 2em 0;
+      padding: 0;
       position: relative;
       // background-color: red;
       text-align: center;
@@ -113,49 +113,49 @@
       @media screen and (max-width: 890px) {
         display: none;
       }
-      img {
-        position: absolute;
-        transition: all 0.5s ease-in;
-        &:hover {
-          transform: scale(1.1);
-          transition: all 0.5s ease-in;
-        }
+      // img {
+      //   position: absolute;
+      //   transition: all 0.5s ease-in;
+      //   &:hover {
+      //     transform: scale(1.1);
+      //     transition: all 0.5s ease-in;
+      //   }
 
-        &:nth-child(1) {
-          top: 50px;
-          right: -20px;
-          width: 45%;
-          &:hover {
-            transform: rotate(-20deg);
-            width: 75%;
-            opacity: 1;
-            z-index: 2;
-          }
-        }
-        &:nth-child(2) {
-          top: 50px;
-          width: 45%;
-          left: 0;
-          &:hover {
-            transform: rotate(20deg);
-            width: 75%;
-            opacity: 1;
-            z-index: 2;
-          }
-        }
-        &:nth-child(3) {
-          width: 50%;
-          right: 120px;
+      //   &:nth-child(1) {
+      //     top: 50px;
+      //     right: -20px;
+      //     width: 45%;
+      //     &:hover {
+      //       transform: rotate(-20deg);
+      //       width: 75%;
+      //       opacity: 1;
+      //       z-index: 2;
+      //     }
+      //   }
+      //   &:nth-child(2) {
+      //     top: 50px;
+      //     width: 45%;
+      //     left: 0;
+      //     &:hover {
+      //       transform: rotate(20deg);
+      //       width: 75%;
+      //       opacity: 1;
+      //       z-index: 2;
+      //     }
+      //   }
+      //   &:nth-child(3) {
+      //     width: 50%;
+      //     right: 120px;
 
-          @media screen and (max-width: 768px) {
-            top: 10px;
-          }
-          &:hover {
-            width: 55%;
-            // opacity: 1;
-          }
-        }
-      }
+      //     @media screen and (max-width: 768px) {
+      //       top: 10px;
+      //     }
+      //     &:hover {
+      //       width: 55%;
+      //       // opacity: 1;
+      //     }
+      //   }
+      // }
     }
   }
 }
