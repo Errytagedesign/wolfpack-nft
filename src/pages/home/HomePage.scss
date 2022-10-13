@@ -40,4 +40,39 @@
       }
     }
   }
+
+  .donate {
+    margin: 100px 0;
+    background-color: var(--dark-green);
+    padding: 5em;
+
+    h3 {
+      color: var(--light-green);
+    }
+
+    p {
+      line-height: 26px;
+    }
+  }
+
+  .newsletter {
+    background-color: var(--trans-white);
+    padding: 5em 3em;
+    border-radius: 40px;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    input {
+      border-radius: 20px;
+    }
+
+    p {
+      margin-top: 52px;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 500;
+    }
+  }
 }

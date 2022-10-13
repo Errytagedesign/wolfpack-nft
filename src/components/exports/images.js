@@ -58,10 +58,24 @@ import armor from "../../assets/images/armor.png";
 import war from "../../assets/images/war.png";
 import warii from "../../assets/images/warii.png";
 import etrunk from "../../assets/images/etrunk.png";
+import Elephant from "../../assets/images/Elephant.png";
+
+// Partners
+import partners1 from "../../assets/images/partners1.png";
+import partners2 from "../../assets/images/partners2.png";
+import partners3 from "../../assets/images/partners3.png";
+import partners4 from "../../assets/images/partners4.png";
+import partners5 from "../../assets/images/partners5.png";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  partners1,
+  partners2,
+  partners3,
+  partners4,
+  partners5,
   emptyframe,
+  Elephant,
   war,
   warii,
   etrunk,
