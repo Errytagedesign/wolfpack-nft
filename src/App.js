@@ -31,9 +31,11 @@ function App() {
           </Routes>
         </Router>
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Router>
+        <footer>
+          <Footer />
+        </footer>
+      </Router>
     </div>
   );
 }
