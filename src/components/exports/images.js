@@ -50,11 +50,23 @@ import nft17 from "../../assets/images/nft17.png";
 import nft18 from "../../assets/images/nft18.png";
 import nft19 from "../../assets/images/nft19.png";
 
-// Landingpage background
+// Landingpage
 import background from "../../assets/images/Backgroung-collection.png";
+import emptyframe from "../../assets/images/emptyframe.png";
+import alien from "../../assets/images/alien.png";
+import armor from "../../assets/images/armor.png";
+import war from "../../assets/images/war.png";
+import warii from "../../assets/images/warii.png";
+import etrunk from "../../assets/images/etrunk.png";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  emptyframe,
+  war,
+  warii,
+  etrunk,
+  alien,
+  armor,
   heronft,
   background,
   Profile,

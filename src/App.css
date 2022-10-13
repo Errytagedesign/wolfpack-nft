@@ -12,6 +12,7 @@
   --accent-color: #eac306;
   --info-color: #2f80ed;
   --dark-green: #015709;
+  --light-green: #9cff4e;
   --success-color: #27ae60;
   --warning-color: #e2b93b;
   --error-color: #eb5757;
@@ -28,6 +29,7 @@
   --white: #fff;
   --trans-white: #ffffff1a;
   --black: #231e1e;
+
   --heading1: 48px;
   --caption: 32px;
   --large-body: 24px;
@@ -35,6 +37,19 @@
 }
 
 /* ======End of Variables========= */
+
+/* ======Start of Fonts========= */
+/* 25px font size heading */
+.heading-large {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* 20px font size heading */
+.heading-medium {
+  font-size: 20px;
+  font-weight: 700;
+}
 
 /* ======Start of Buttons========= */
 
@@ -110,6 +125,7 @@ body {
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
+  color: var(--white);
 }
 
 ::selection {
