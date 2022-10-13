@@ -39,6 +39,15 @@ const settings = {
   ],
 };
 
+const NftMobileSliderSettings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+};
+
 const nftCardsImages = [
   { pic: images.nft01 },
   { pic: images.nft02 },
@@ -145,7 +154,11 @@ function HomePage() {
       {/* Start Wolfpack descriptions section  */}
 
       <section className="wolf-pack home-containers d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <article className="col-12 col-md-7">
+        <article
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          className="col-12 col-md-7 text-center text-md-start"
+        >
           <h2> WolfPackHerd ! an NFT and More </h2>
           <p>
             {" "}
@@ -155,7 +168,11 @@ function HomePage() {
           </p>
         </article>
 
-        <aside className="col-12 col-md-4 text-center">
+        <aside
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          className="col-12 col-md-4 text-center"
+        >
           {" "}
           <img className="col-8 mx-auto" src={images.emptyframe} alt="" />{" "}
         </aside>
@@ -165,8 +182,8 @@ function HomePage() {
 
       {/* Start Wolfpack NFT Collection section  */}
 
-      <section className="nft-collections home-containers d-flex flex-column align-items-center justify-content-between">
-        <article className="col-12">
+      <section className="nft-collections home-containers d-flex flex-column justify-content-between">
+        <article className="col-12 text-center text-lg-start">
           <h2> NFT’s TRUNK Collection </h2>
           <p>
             {" "}
@@ -177,7 +194,23 @@ function HomePage() {
           </p>
         </article>
 
-        <section className="d-flex flex-wrap">
+        <section className="d-flex flex-wrap col-12 d-none d-lg-flex">
+          {NftCards.map((card) => (
+            <div className=" p-2 col-4">
+              <NftCollection
+                key={card.id}
+                title={card.title}
+                imageUrl={card.pic}
+                apy={card.apyValue}
+                floor={card.floorPrice}
+                qty={card.qtyValue}
+                desc={card.desc}
+              />
+            </div>
+          ))}
+        </section>
+
+        <Slider className="d-block d-lg-none" {...NftMobileSliderSettings}>
           {NftCards.map((card) => (
             <div className=" p-2 col-12 col-md-4">
               <NftCollection
@@ -191,7 +224,7 @@ function HomePage() {
               />
             </div>
           ))}
-        </section>
+        </Slider>
       </section>
 
       {/* End Wolfpack NFT Collection section  */}
@@ -199,23 +232,36 @@ function HomePage() {
       {/* Start of DOnate  section  */}
 
       <section className="donate d-flex flex-column flex-lg-row align-items-center justify-content-between justify-content-lg-around">
-        <div className="col-12 col-lg-6 order-0 order-md-1 ">
+        <div className="col-12 col-lg-6 order-1 order-lg-0 ">
           {" "}
-          <img data-aos="zoom-in" src={images.Elephant} alt="" />{" "}
+          <img
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            src={images.Elephant}
+            alt=""
+          />{" "}
           <div className="d-block mt-5 text-center d-lg-none">
-            <Link data-aos="fade-left" className="Btn btn-black btn-normal">
+            <Link
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              className="Btn btn-black btn-normal"
+            >
               {" "}
               Donate{" "}
             </Link>
           </div>
         </div>
-        <div className="donate-title d-flex order-1 order-md-0 flex-column col-12 col-lg-5 mb-5 mb-lg-0">
+        <div className="donate-title d-flex order-0 order-lg-1 flex-column col-12 col-lg-5 mb-5 mb-lg-0">
           {" "}
-          <h3 data-aos="fade-right" className="heading-medium">
+          <h3
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="heading-medium"
+          >
             {" "}
             SAVE THE ELEPHANT{" "}
           </h3>
-          <p data-aos="fade-right">
+          <p data-aos="fade-right" data-aos-duration="2000">
             {" "}
             A huge part of this project is our donation towards Saving Elephants
             and Habitat Worldwide. <br /> We believe in creating a sustainable
@@ -268,11 +314,11 @@ function HomePage() {
         data-aos="zoom-in"
         className="newsletter home-containers d-flex flex-column align-items-center"
       >
-        <article className="d-flex flex-column flex-md-row justify-content-between">
+        <article className="d-flex flex-column flex-lg-row justify-content-between text-center text-lg-start">
           <div
             data-aos="fade-left"
             data-aos-duration="2000"
-            className="col-12 col-md-4"
+            className="col-12 col-lg-4"
           >
             <h3> Newsletters</h3>
             <p>
@@ -285,7 +331,7 @@ function HomePage() {
           <div
             data-aos="fade-right"
             data-aos-duration="2000"
-            className="col-12 col-md-7"
+            className="col-12 col-lg-7"
           >
             <input
               type="email"

@@ -13,10 +13,18 @@ function NftCollection({ imageUrl, title, desc, qty, floor, apy }) {
           <img src={imageUrl} alt="wolfpackherd nft collections" />
         </div>
 
-        <div className="p-3 nft-card-title">
+        <div
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          className="p-3 nft-card-title"
+        >
           <h3 className="heading-medium"> {title} </h3>
           <p>{desc}</p>
-          <div className="d-flex flex-column nft-card-details">
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            className="d-flex flex-column nft-card-details"
+          >
             {" "}
             <span>
               {" "}

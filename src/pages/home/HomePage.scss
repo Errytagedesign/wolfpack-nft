@@ -46,6 +46,10 @@
     background-color: var(--dark-green);
     padding: 5em;
 
+    @media screen and (max-width: 500px) {
+      padding: 3em 2em;
+    }
+
     h3 {
       color: var(--light-green);
     }
@@ -59,6 +63,10 @@
     background-color: var(--trans-white);
     padding: 5em 3em;
     border-radius: 40px;
+
+    @media screen and (max-width: 500px) {
+      padding: 3em 1em;
+    }
 
     h3 {
       font-size: 24px;
