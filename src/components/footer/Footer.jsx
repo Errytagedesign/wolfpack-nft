@@ -3,10 +3,20 @@ import { Link } from "react-router-dom";
 import images from "../exports/images";
 import "./Footer.scss";
 
+// icons
+import {
+  FaDiscord,
+  FaTwitter,
+  FaYoutube,
+  FaTelegramPlane,
+} from "react-icons/fa";
+
+import { BiCopyright } from "react-icons/bi";
+
 function Footer() {
   return (
     <div className="footer d-flex flex-column">
-      <main className="d-flex flex-column flex-lg-row  justify-content-between">
+      <main className="d-flex flex-column flex-lg-row  justify-content-between align-items-center align-items-lg-start ">
         {/* Logo */}
         <section className="col-12 col-md-8 logo col-lg-4 d-flex flex-column text-center text-lg-start mx-auto">
           <div className="d-flex flex-row col-10 col-md-6 col-lg-12 mx-auto align-items-center ">
@@ -25,6 +35,14 @@ function Footer() {
             Discover valuable digital arts with WolfPackHerd. Buy,sell,stop
             losses and earn more. We do the Defi for you!Blaaaaaaaaaaaaaaaaaaaa
           </p>
+
+          <div className="community-container d-none d-lg-flex flex-column">
+            <h4> Community </h4>
+            <div className="icon">
+              {" "}
+              <FaTwitter /> <FaTelegramPlane /> <FaDiscord /> <FaYoutube />{" "}
+            </div>
+          </div>
         </section>
 
         <section className="d-flex flex-wrap justify-content-between col-12 col-lg-7">
@@ -68,10 +86,20 @@ function Footer() {
             <Link to="/contact"> Tutorial </Link>
           </aside>
         </section>
+        <div className="community-container d-flex flex-column d-lg-none align-items-center">
+          <h4> Community </h4>
+          <div className="icon">
+            {" "}
+            <FaTwitter /> <FaTelegramPlane /> <FaDiscord /> <FaYoutube />{" "}
+          </div>
+        </div>
       </main>
 
       <article className="d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
-        <small> 2022 Wolfpackherd Network,inc. All rights reserved</small>
+        <small>
+          {" "}
+          <BiCopyright /> 2022 Wolfpackherd Network,inc. All rights reserved
+        </small>
         <div className="d-flex col-8 col-md-3 mt-3 mt-lg-0 flex-row justify-content-between">
           <small> Terms of use</small>
           <small> Privacy policy</small>

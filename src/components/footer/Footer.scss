@@ -2,6 +2,36 @@
   padding: 18px 88px;
   background-color: var(--dark-green);
 
+  .community-container {
+    @media screen and (max-width: 890px) {
+      width: 100%;
+
+      margin-top: 50px;
+
+      .icon {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .logo {
+    .community-container {
+      width: 50%;
+      margin-top: 100px;
+
+      h4 {
+        margin-bottom: 25px;
+      }
+      .icon {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+      }
+    }
+  }
+
   @media screen and (max-width: 890px) {
     padding: 20px 35px 50px;
   }

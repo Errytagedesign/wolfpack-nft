@@ -5,7 +5,7 @@
   backdrop-filter: blur(15px) brightness(0.9);
   -webkit-backdrop-filter: blur(15px) brightness(0.9);
   nav {
-    // padding: 0.8em 0;
+    padding: 0.8em 0;
 
     .logo {
       h2 {
@@ -103,7 +103,7 @@
       }
     }
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 890px) {
       .logo {
         h2 {
           font-size: 16px;
@@ -132,7 +132,7 @@
           position: absolute;
           height: 4px;
           width: 70%;
-          background: var(--white);
+          background: var(--light-green);
           border-radius: 9px;
           opacity: 1;
           left: 0;
@@ -180,7 +180,7 @@
           position: absolute;
           height: 4px;
           width: 70%;
-          background: var(--white);
+          background: var(--light-green);
           border-radius: 9px;
           opacity: 1;
           left: 0;
