@@ -13,10 +13,50 @@ import images from "../exports/images";
 function NavBar() {
   const [navbar, setNavbar] = useState(true);
 
+  const [dropDownExplore, setDropDownExplore] = useState(true);
+  const [dropDownStats, setDropDownStats] = useState(true);
+  const [dropDownAsset, setDropDownAsset] = useState(true);
+
+  const handleExploreDropdown = () => {
+    setDropDownExplore((current) => !current);
+  };
+  const handleStatsDropdown = () => {
+    setDropDownStats((current) => !current);
+  };
+  const handleAssetDropdown = () => {
+    setDropDownAsset((current) => !current);
+  };
+
   const handleNav = () => {
     setNavbar(!navbar);
-    console.log("here");
   };
+
+  const NavLinks = [
+    {
+      explore: [
+        { name: "Mint NFT", icon: images.MintNft },
+        { name: "Ivory Savings", icon: images.NfcSaving },
+        { name: "Crypto Gift Card", icon: images.CryptoGift },
+        { name: " NFC Saving Promo", icon: images.Ivory },
+        { name: "Defi Calendar", icon: images.DefiCalendar },
+        { name: "Dox.me", icon: images.Dox },
+        { name: "Music NFT", icon: images.MusciNft },
+      ],
+
+      stats: [
+        { name: "Top APY", icon: images.TopApy },
+        { name: "Trending", icon: images.Trending },
+      ],
+
+      asset: [
+        { name: "White Paper", icon: images.WhitePaper },
+        { name: "Mint Process", icon: images.MintProcess },
+        { name: "Help Center", icon: images.HelpCenter },
+      ],
+    },
+  ];
+
+  console.log(NavLinks[0].explore);
 
   return (
     <section className="nav-container">
@@ -33,74 +73,68 @@ function NavBar() {
         >
           <aside className="col-12 col-lg-10 d-flex flex-column flex-lg-row  ">
             {/* nav Links */}
-            <section className="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-end align-items-center">
+            <section className="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-end ">
               {/* explore */}
-              <section className=" nav-items d-flex flex-column ">
-                <p>
-                  {" "}
-                  Explore <BsChevronDown className="icon" />{" "}
+              <div className=" nav-items d-flex flex-column ">
+                <p onClick={handleExploreDropdown}>
+                  Explore <BsChevronDown className="icon" />
                 </p>
-                <div className="dropdown-lists ">
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.MintNft} alt="" /> M int NFT
-                  </Link>
-                  <Link className="dropdown-list-items" to="/ivorysavings">
-                    <img src={images.Ivory} alt="" /> Ivory Savings
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.CryptoGift} alt="" /> Crypto Gift Card
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.NfcSaving} alt="" /> NFC Saving Promo
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.DefiCalendar} alt="" /> Defi Calendar
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.Dox} alt="" /> Dox.me
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.MusciNft} alt="" /> Music NFT
-                  </Link>
+                <div
+                  className={`dropdown-lists ${
+                    dropDownExplore
+                      ? "show-dropdown-lists"
+                      : "hide-dropdown-lists"
+                  }`}
+                >
+                  {NavLinks[0].explore.map((item) => (
+                    <Link className="dropdown-list-items" to="/mintnft">
+                      <img src={item.icon} alt="" /> {item.name}
+                    </Link>
+                  ))}
                 </div>
-              </section>
+              </div>
 
               {/* stats */}
-              <section className=" nav-items d-flex flex-column ">
-                <p>
+              <div className=" nav-items d-flex flex-column ">
+                <p onClick={handleStatsDropdown}>
                   {" "}
                   Stats <BsChevronDown className="icon" />{" "}
                 </p>
-                <div className="dropdown-lists ">
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.TopApy} alt="" /> Top APY
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.Trending} alt="" /> Trending
-                  </Link>
+                <div
+                  className={`dropdown-lists ${
+                    dropDownStats
+                      ? "show-dropdown-lists"
+                      : "hide-dropdown-lists"
+                  }`}
+                >
+                  {NavLinks[0].stats.map((item) => (
+                    <Link className="dropdown-list-items" to="/mintnft">
+                      <img src={item.icon} alt="" /> {item.name}
+                    </Link>
+                  ))}
                 </div>
-              </section>
+              </div>
 
               {/* Asset */}
-              <section className=" nav-items d-flex flex-column ">
-                <p>
+              <div className=" nav-items d-flex flex-column ">
+                <p onClick={handleAssetDropdown}>
                   {" "}
                   Asset <BsChevronDown className="icon" />{" "}
                 </p>
-                <div className="dropdown-lists ">
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.WhitePaper} alt="" /> White Paper
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.MintProcess} alt="" />
-                    Mint Process
-                  </Link>
-                  <Link className="dropdown-list-items" to="/mintnft">
-                    <img src={images.HelpCenter} alt="" />
-                    Help Center
-                  </Link>
+                <div
+                  className={`dropdown-lists ${
+                    dropDownAsset
+                      ? "show-dropdown-lists"
+                      : "hide-dropdown-lists"
+                  }`}
+                >
+                  {NavLinks[0].asset.map((item) => (
+                    <Link className="dropdown-list-items" to="/mintnft">
+                      <img src={item.icon} alt="" /> {item.name}
+                    </Link>
+                  ))}
                 </div>
-              </section>
+              </div>
             </section>
 
             {/* profile and btn */}

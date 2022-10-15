@@ -75,6 +75,10 @@
         font-weight: 700;
         // padding: 2em 0;
         color: var(--white);
+
+        span {
+          color: var(--light-green);
+        }
         @media screen and (max-width: 768px) {
           font-size: 40px;
           margin: 0.5em 0 1em;

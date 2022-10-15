@@ -32,8 +32,8 @@ function Footer() {
           </div>
           <p>
             {" "}
-            Discover valuable digital arts with WolfPackHerd. Buy,sell,stop
-            losses and earn more. We do the Defi for you!Blaaaaaaaaaaaaaaaaaaaa
+            Discover valuable digital collectibies with WolfPackHerd. Buy, sell,
+            stop losses and earn more.
           </p>
 
           <div className="community-container d-none d-lg-flex flex-column">
@@ -58,13 +58,33 @@ function Footer() {
           {/* services */}
           <aside className="d-flex col-5 col-lg-3  flex-column ">
             <h4> Services </h4>
-            <Link to="/about">NFT Arts</Link>
-            <Link to="/careers"> Elephant Money</Link>
-            <Link to="/donate"> Music NFT player </Link>
-            <Link to="/contact"> Crypto Giftcard </Link>
-            <Link to="/contact"> Defi Calendar </Link>
-            <Link to="/contact"> Dox.me </Link>
-            <Link to="/contact"> NFC savings promo card </Link>
+            <Link to="/ntfarts">
+              NFT Arts <br /> <span>Comming soon </span>{" "}
+            </Link>
+            <Link to="/ivory">
+              {" "}
+              Elephant Money <br /> <span>Comming soon </span>
+            </Link>
+            <Link to="/musicnft">
+              {" "}
+              Music NFT player <br /> <span>Comming soon </span>{" "}
+            </Link>
+            <Link to="/cryptocard">
+              {" "}
+              Crypto Giftcard <br /> <span>Comming soon </span>{" "}
+            </Link>
+            <Link to="/deficalendar">
+              {" "}
+              Defi Calendar <br /> <span>Comming soon </span>{" "}
+            </Link>
+            <Link to="/doxme">
+              {" "}
+              Dox.me <br /> <span>Comming soon </span>{" "}
+            </Link>
+            <Link to="/nfcsaving">
+              {" "}
+              NFC savings promo card <br /> <span>Comming soon </span>{" "}
+            </Link>
           </aside>
           {/* Support */}
           <aside className="d-flex col-5 col-lg-3  flex-column ">

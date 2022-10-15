@@ -27,7 +27,8 @@ function HeroSection() {
           className=" col-12 col-lg-6 title-container"
         >
           <h2 data-aos="fade-left" data-aos-duration="5000">
-            Discover valuable digital Collectibles with WolfPackHerd
+            Discover valuable <span> Digital Collectibles </span>with
+            WolfPackHerd
           </h2>
           <Link data-aos="fade-left" className="Btn btn-black btn-normal">
             {" "}
