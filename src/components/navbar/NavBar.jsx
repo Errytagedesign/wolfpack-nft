@@ -9,9 +9,11 @@ import "./NavBar.scss";
 
 // images
 import images from "../exports/images";
+import ConnectWallet from "../connectWallet/ConnectWallet";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(true);
+  const [showConnectWallet, setShowConnectWallet] = useState(true);
 
   const [dropDownExplore, setDropDownExplore] = useState(true);
   const [dropDownStats, setDropDownStats] = useState(true);
@@ -29,6 +31,10 @@ function NavBar() {
 
   const handleNav = () => {
     setNavbar(!navbar);
+  };
+
+  const handleConnectWallet = () => {
+    setShowConnectWallet(!showConnectWallet);
   };
 
   const NavLinks = [
@@ -56,14 +62,14 @@ function NavBar() {
     },
   ];
 
-  console.log(NavLinks[0].explore);
+  // console.log(NavLinks[0].explore);
 
   return (
     <section className="nav-container">
       <nav className="d-flex container flex-row align-items-center justify-content-between pt-3">
         {/* Logo */}
         <section className="col-8 col-md-3 d-flex flex-row align-items-center logo">
-          <img className="col-3" src={images.Logo} alt=" Wolf Pack Logo" />
+          <img src={images.Logo} alt=" Wolf Pack Logo" />
           <h2> WolfPack Herd </h2>
         </section>
         <div
@@ -143,7 +149,7 @@ function NavBar() {
                 {" "}
                 <img src={images.Profile} alt="" />{" "}
               </div>
-              <div>
+              <div onClick={handleConnectWallet}>
                 {" "}
                 <Link className="Btn btn-black btn-normal m-3 d-flex flex-row align-items-center">
                   <img src={images.Walleticon} alt="" />
@@ -160,6 +166,10 @@ function NavBar() {
           <span></span>
         </div>
       </nav>
+
+      <div className={showConnectWallet ? "d-none" : "d-block"}>
+        <ConnectWallet />
+      </div>
     </section>
   );
 }

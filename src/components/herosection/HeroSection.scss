@@ -8,6 +8,11 @@
   .hero-header {
     position: relative;
     z-index: 7;
+
+    .slick-next:before,
+    .slick-prev:before {
+      display: none;
+    }
   }
 
   .spinner {
@@ -49,14 +54,14 @@
     }
 
     @media screen and (max-width: 890px) {
-      top: 0;
+      top: -250px;
       left: -400px;
       width: 200%;
     }
 
     @media screen and (max-width: 500px) {
-      top: -50px;
-      left: -4.5em;
+      top: -200px;
+      left: -5.5em;
       width: 150%;
     }
   }

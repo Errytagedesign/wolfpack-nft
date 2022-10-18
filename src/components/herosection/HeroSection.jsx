@@ -9,12 +9,13 @@ import "./HeroSection.scss";
 // images
 import images from "../exports/images";
 
-const settings = {
+const HeroSettings = {
   dots: false,
   infinite: true,
-  speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
 };
 
 function HeroSection() {
@@ -46,7 +47,7 @@ function HeroSection() {
         </section>
 
         {/* NFT collectibles for mobile screen */}
-        <Slider {...settings} className="d-block d-lg-none slider-mobile">
+        <Slider {...HeroSettings} className="d-block d-lg-none slider-mobile">
           <div>
             <img src={images.NftCard3} alt="wolfpackherd nft" />
           </div>

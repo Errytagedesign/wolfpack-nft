@@ -6,6 +6,11 @@
   .home-containers {
     margin: 100px auto;
     width: 80%;
+
+    .slick-next:before,
+    .slick-prev:before {
+      display: none;
+    }
   }
 
   .wolf-pack {

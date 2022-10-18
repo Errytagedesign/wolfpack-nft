@@ -67,8 +67,18 @@ import partners3 from "../../assets/images/partners3.png";
 import partners4 from "../../assets/images/partners4.png";
 import partners5 from "../../assets/images/partners5.png";
 
+// Connect Wallet
+import binance from "../../assets/images/binance.png";
+import metamask from "../../assets/images/metamask.png";
+import coinbase from "../../assets/images/coinbase.png";
+import walletconnect from "../../assets/images/walletconnect.png";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  walletconnect,
+  coinbase,
+  metamask,
+  binance,
   partners1,
   partners2,
   partners3,

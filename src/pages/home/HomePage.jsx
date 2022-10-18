@@ -210,6 +210,8 @@ function HomePage() {
           ))}
         </section>
 
+        {/* Mobile Slider */}
+
         <Slider className="d-block d-lg-none" {...NftMobileSliderSettings}>
           {NftCards.map((card) => (
             <div className=" p-2 col-12 col-md-4">
