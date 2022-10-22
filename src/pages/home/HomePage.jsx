@@ -130,6 +130,19 @@ const partnersLogo = [
   { logo: images.partners3 },
   { logo: images.partners4 },
   { logo: images.partners5 },
+  { logo: images.partners6 },
+  { logo: images.partners7 },
+  { logo: images.partners8 },
+  { logo: images.partners9 },
+];
+
+const makersLogo = [
+  { logo: images.makers1 },
+  { logo: images.makers2 },
+  { logo: images.makers3 },
+  { logo: images.makers4 },
+  { logo: images.makers5 },
+  { logo: images.makers6 },
 ];
 
 function HomePage() {
@@ -292,6 +305,26 @@ function HomePage() {
         <h4 className="mb-5"> Our Partners </h4>
         <div className="d-flex flex-wrap align-items-center justify-content-center">
           {partnersLogo.map((partner) => (
+            <div
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              className="col-3 col-md-2"
+            >
+              <img
+                className="col-12 mx-auto"
+                src={partner.logo}
+                alt="wolfpackherd nft cards"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="partners home-containers d-flex flex-column align-items-center justify-content-center">
+        <h4 className="mb-5"> Yield Makers </h4>
+        <div className="d-flex flex-wrap align-items-center justify-content-center">
+          {makersLogo.map((partner) => (
             <div
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"

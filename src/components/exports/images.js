@@ -66,6 +66,17 @@ import partners2 from "../../assets/images/partners2.png";
 import partners3 from "../../assets/images/partners3.png";
 import partners4 from "../../assets/images/partners4.png";
 import partners5 from "../../assets/images/partners5.png";
+import partners6 from "../../assets/images/partners6.png";
+import partners7 from "../../assets/images/partners7.png";
+import partners8 from "../../assets/images/partners8.png";
+import partners9 from "../../assets/images/partners9.png";
+
+import makers1 from "../../assets/images/makers1.png";
+import makers2 from "../../assets/images/makers2.png";
+import makers3 from "../../assets/images/makers3.png";
+import makers4 from "../../assets/images/makers4.png";
+import makers5 from "../../assets/images/makers5.png";
+import makers6 from "../../assets/images/makers6.png";
 
 // Connect Wallet
 import binance from "../../assets/images/binance.png";
@@ -84,6 +95,16 @@ export default {
   partners3,
   partners4,
   partners5,
+  partners6,
+  partners7,
+  partners8,
+  partners9,
+  makers1,
+  makers2,
+  makers3,
+  makers4,
+  makers5,
+  makers6,
   emptyframe,
   Elephant,
   war,
