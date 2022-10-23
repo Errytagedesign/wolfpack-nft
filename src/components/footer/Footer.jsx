@@ -40,7 +40,38 @@ function Footer() {
             <h4> Community </h4>
             <div className="icon">
               {" "}
-              <FaTwitter /> <FaTelegramPlane /> <FaDiscord /> <FaYoutube />{" "}
+              <a
+                href="https://twitter.com/WolfPackHerd"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                <FaTwitter />{" "}
+              </a>{" "}
+              <a
+                href="https://t.me/WolfPackHerdNetwork"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                <FaTelegramPlane />{" "}
+              </a>{" "}
+              <a
+                href="https://discord.gg/VdjEbbx86n "
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                <FaDiscord />{" "}
+              </a>{" "}
+              <a
+                href="https://youtube.com/WolfPackHerdNetwork"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                <FaYoutube />{" "}
+              </a>{" "}
             </div>
           </div>
         </section>

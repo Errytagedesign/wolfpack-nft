@@ -79,10 +79,10 @@ const NftCards = [
     qtyValue: "2000",
 
     floor: "Floor Price",
-    floorValue: "3.69BNB",
+    floorValue: "$1000 BUSD",
 
     apy: "APY Earning",
-    apyValue: "%4",
+    apyValue: "%96",
     pic: images.alien,
   },
   {
@@ -91,8 +91,8 @@ const NftCards = [
     desc: "Armor Trunk NFT is the second most valuable NFT in our collection and it bequeaths holders' preferences for whitelist spots on future projects after Alien Trunk Holders.",
 
     qtyValue: "3000",
-    floorPrice: "1.84BNB",
-    apyValue: "%3",
+    floorPrice: "$500 BUSD",
+    apyValue: "%72",
     pic: images.armor,
   },
   {
@@ -100,8 +100,8 @@ const NftCards = [
     title: "eTrunk NFT",
     desc: "eTrunk NFT is the most numerous NFT in our collection and opens holders to exclusive airdrops, dividends from yields and nodes, and more.",
     qtyValue: "5000",
-    floorPrice: "0.92BNB",
-    apyValue: "%2.5",
+    floorPrice: "$250 BUSD",
+    apyValue: "%60",
     pic: images.etrunk,
   },
   {
@@ -109,8 +109,8 @@ const NftCards = [
     title: "War Trunk NFT",
     desc: "Holding this NFT opens users to juicy discounts, exclusive airdrops, and more.    ",
     qtyValue: "2000",
-    floorPrice: "0.46BNB",
-    apyValue: "%2",
+    floorPrice: "$125 BUSD",
+    apyValue: "%48",
     pic: images.war,
   },
   {
@@ -118,7 +118,7 @@ const NftCards = [
     title: "WWar II Trunk NFT",
     desc: "Holding this NFT opens users to juicy discounts, exclusive airdrops, and more.    ",
     qtyValue: "2000",
-    floorPrice: "0.0037BNB",
+    floorPrice: "$65 BUSD",
     apyValue: "No Earning",
     pic: images.warii,
   },
