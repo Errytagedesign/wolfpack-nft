@@ -75,13 +75,10 @@ const NftCards = [
     id: 1,
     title: "Alien Trunk NFT",
     desc: "Alien Trunk NFT is the leader of the pack and the rarest NFT in our collection. Holding this NFT gives users access to whitelist spots on all future projects.",
-    qty: "Quantity",
+
     qtyValue: "2000",
+    floorPrice: "$1000 BUSD",
 
-    floor: "Floor Price",
-    floorValue: "$1000 BUSD",
-
-    apy: "APY Earning",
     apyValue: "%96",
     pic: images.alien,
   },
@@ -92,6 +89,7 @@ const NftCards = [
 
     qtyValue: "3000",
     floorPrice: "$500 BUSD",
+
     apyValue: "%72",
     pic: images.armor,
   },
@@ -99,8 +97,10 @@ const NftCards = [
     id: 3,
     title: "eTrunk NFT",
     desc: "eTrunk NFT is the most numerous NFT in our collection and opens holders to exclusive airdrops, dividends from yields and nodes, and more.",
+
     qtyValue: "5000",
     floorPrice: "$250 BUSD",
+
     apyValue: "%60",
     pic: images.etrunk,
   },
@@ -108,8 +108,10 @@ const NftCards = [
     id: 4,
     title: "War Trunk NFT",
     desc: "Holding this NFT opens users to juicy discounts, exclusive airdrops, and more.    ",
+
     qtyValue: "2000",
     floorPrice: "$125 BUSD",
+
     apyValue: "%48",
     pic: images.war,
   },
@@ -117,8 +119,10 @@ const NftCards = [
     id: 5,
     title: "WWar II Trunk NFT",
     desc: "Holding this NFT opens users to juicy discounts, exclusive airdrops, and more.    ",
+
     qtyValue: "2000",
     floorPrice: "$65 BUSD",
+
     apyValue: "No Earning",
     pic: images.warii,
   },
