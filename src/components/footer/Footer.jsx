@@ -76,66 +76,72 @@ function Footer() {
           </div>
         </section>
 
-        <section className="d-flex flex-wrap justify-content-between col-12 col-lg-7">
-          {/* company */}
-          <aside className="d-flex align-content-center col-5 col-lg-3 flex-column ">
-            <h4> Company </h4>
-            <Link to="/about">About</Link>
-            <Link to="/careers"> Careers</Link>
-            <Link to="/donate"> Donate </Link>
-            <Link to="/contact"> Contact us </Link>
-          </aside>
+        <section className="d-flex flex-row justify-content-between col-12 col-lg-7">
+          <div className="d-flex flex-column flex-lg-row justify-content-between col-lg-6">
+            {/* company */}
+            <aside className="d-flex align-content-center col-12 col-lg-6 flex-column ">
+              <h4> Company </h4>
+              <Link to="/about">About</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/careers"> Careers</Link>
+              <Link to="/donate"> Donate </Link>
+              <Link to="/contact"> Contact us </Link>
+            </aside>
 
-          {/* services */}
-          <aside className="d-flex col-5 col-lg-3  flex-column ">
-            <h4> Services </h4>
-            <Link to="/ntfarts">
-              NFT Arts <br /> <span>Comming soon </span>{" "}
-            </Link>
-            <Link to="/ivory">
-              {" "}
-              Elephant Money <br /> <span>Comming soon </span>
-            </Link>
-            <Link to="/musicnft">
-              {" "}
-              Music NFT player <br /> <span>Comming soon </span>{" "}
-            </Link>
-            <Link to="/cryptocard">
-              {" "}
-              Crypto Giftcard <br /> <span>Comming soon </span>{" "}
-            </Link>
-            <Link to="/deficalendar">
-              {" "}
-              Defi Calendar <br /> <span>Comming soon </span>{" "}
-            </Link>
-            <Link to="/doxme">
-              {" "}
-              Dox.me <br /> <span>Comming soon </span>{" "}
-            </Link>
-            <Link to="/nfcsaving">
-              {" "}
-              NFC savings promo card <br /> <span>Comming soon </span>{" "}
-            </Link>
-          </aside>
-          {/* Support */}
-          <aside className="d-flex col-5 col-lg-3  flex-column ">
-            <h4> Support </h4>
-            <Link to="/about">Help center</Link>
-            <Link to="/careers"> Account informations</Link>
-            <Link to="/donate"> Settings</Link>
-            <Link to="/contact"> FAQ </Link>
-          </aside>
-          <aside className="d-flex col-5 col-lg-3  flex-column ">
-            <h4> Resources </h4>
-            <Link to="/about">Mint process</Link>
-            <Link to="/careers"> Whitepaper</Link>
-            <Link to="/donate"> Partners </Link>
-            <Link to="/contact"> API Docs </Link>
-            <Link to="/contact"> Documentation </Link>
-            <Link to="/contact"> Github </Link>
-            <Link to="/contact"> Newsletter </Link>
-            <Link to="/contact"> Tutorial </Link>
-          </aside>
+            {/* services */}
+            <aside className="d-flex col-12 col-lg-6  flex-column ">
+              <h4> Services </h4>
+              <Link to="/ntfarts">
+                NFT Arts <br /> <span>Coming soon </span>{" "}
+              </Link>
+              <Link to="/ivory">
+                {" "}
+                Ivory Tusk AUM <br /> <span>Coming soon </span>
+              </Link>
+              <Link to="/musicnft">
+                {" "}
+                Music NFT player <br /> <span>Coming soon </span>{" "}
+              </Link>
+              <Link to="/cryptocard">
+                {" "}
+                Crypto Giftcard <br /> <span>Coming soon </span>{" "}
+              </Link>
+              <Link to="/deficalendar">
+                {" "}
+                Defi Calendar <br /> <span>Coming soon </span>{" "}
+              </Link>
+              <Link to="/doxme">
+                {" "}
+                Dox.me <br /> <span>Coming soon </span>{" "}
+              </Link>
+              <Link to="/nfcsaving">
+                {" "}
+                NFC savings promo card <br /> <span>Coming soon </span>{" "}
+              </Link>
+            </aside>
+          </div>
+
+          <div className="d-flex flex-column flex-lg-row justify-content-between col-lg-6">
+            {/* Support */}
+            <aside className="d-flex col-12 col-lg-6  flex-column ">
+              <h4> Support </h4>
+              <Link to="/about">Help center</Link>
+              <Link to="/careers"> Account informations</Link>
+              <Link to="/donate"> Settings</Link>
+              <Link to="/contact"> FAQ </Link>
+            </aside>
+            <aside className="d-flex col-12 col-lg-6  flex-column ">
+              <h4> Resources </h4>
+              <Link to="/about">Mint process</Link>
+              <Link to="/careers"> Whitepaper</Link>
+              <Link to="/donate"> Partners </Link>
+              <Link to="/contact"> API Docs </Link>
+              <Link to="/contact"> Documentation </Link>
+              <Link to="/contact"> Github </Link>
+              <Link to="/contact"> Newsletter </Link>
+              <Link to="/contact"> Tutorial </Link>
+            </aside>
+          </div>
         </section>
         <div className="community-container d-flex flex-column d-lg-none align-items-center">
           <h4> Community </h4>

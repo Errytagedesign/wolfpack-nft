@@ -18,6 +18,9 @@
 
       img {
         width: 50px;
+        @media screen and (max-width: 890px) {
+          width: 30px;
+        }
       }
     }
 
