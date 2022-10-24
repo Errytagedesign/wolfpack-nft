@@ -35,29 +35,42 @@ function NavBar() {
 
   const handleConnectWallet = () => {
     setShowConnectWallet(!showConnectWallet);
+
+    // when the connect wallet button is clicked on mobile the nacbar closed
+    if (!navbar) {
+      setNavbar(!navbar);
+    }
   };
 
   const NavLinks = [
     {
       explore: [
-        { name: "Mint NFT", icon: images.MintNft },
-        { name: "Ivory Savings", icon: images.NfcSaving },
-        { name: "Crypto Gift Card", icon: images.CryptoGift },
-        { name: " NFC Saving Promo", icon: images.Ivory },
-        { name: "Defi Calendar", icon: images.DefiCalendar },
-        { name: "Dox.me", icon: images.Dox },
-        { name: "Music NFT", icon: images.MusciNft },
+        { name: "Mint NFT", icon: images.MintNft, url: "/mintnft" },
+        { name: "Ivory Savings", icon: images.NfcSaving, url: "/ivorysavings" },
+        {
+          name: "Crypto Gift Card",
+          icon: images.CryptoGift,
+          url: "/cryptocard",
+        },
+        { name: " NFC Saving Promo", icon: images.Ivory, url: "/nfcsaving" },
+        {
+          name: "Defi Calendar",
+          icon: images.DefiCalendar,
+          url: "/deficalendar",
+        },
+        { name: "Dox.me", icon: images.Dox, url: "/doxme" },
+        { name: "Music NFT", icon: images.MusciNft, url: "/musicnft" },
       ],
 
       stats: [
-        { name: "Top APY", icon: images.TopApy },
-        { name: "Trending", icon: images.Trending },
+        { name: "Top APY", icon: images.TopApy, url: "/topapy" },
+        { name: "Trending", icon: images.Trending, url: "/trending" },
       ],
 
       asset: [
-        { name: "White Paper", icon: images.WhitePaper },
-        { name: "Mint Process", icon: images.MintProcess },
-        { name: "Help Center", icon: images.HelpCenter },
+        { name: "White Paper", icon: images.WhitePaper, url: "/whitepaper" },
+        { name: "Mint Process", icon: images.MintProcess, url: "/mintprocess" },
+        { name: "Help Center", icon: images.HelpCenter, url: "/helpcenter" },
       ],
     },
   ];
@@ -65,112 +78,137 @@ function NavBar() {
   // console.log(NavLinks[0].explore);
 
   return (
-    <section className="nav-container">
-      <nav className="d-flex container flex-row align-items-center justify-content-between pt-3">
-        {/* Logo */}
-        <section className="col-8 col-md-3 d-flex flex-row align-items-center logo">
-          <img src={images.Logo} alt=" Wolf Pack Logo" />
-          <h2> WolfPack Herd </h2>
-        </section>
-        <div
-          className={` col-12 col-9 d-flex flex-column flex-lg-row ${
-            navbar ? " displayNav" : "navMove"
-          }`}
-        >
-          <aside className="col-12 col-lg-10 d-flex flex-column flex-lg-row  ">
-            {/* nav Links */}
-            <section className="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-end ">
-              {/* explore */}
-              <div className=" nav-items d-flex flex-column ">
-                <p onClick={handleExploreDropdown}>
-                  Explore <BsChevronDown className="icon" />
-                </p>
-                <div
-                  className={`dropdown-lists ${
-                    dropDownExplore
-                      ? "show-dropdown-lists"
-                      : "hide-dropdown-lists"
-                  }`}
-                >
-                  {NavLinks[0].explore.map((item) => (
-                    <Link className="dropdown-list-items" to="/mintnft">
-                      <img src={item.icon} alt="" /> {item.name}
-                    </Link>
-                  ))}
+    <div>
+      <section className="nav-container">
+        <nav className="d-flex container flex-row align-items-center justify-content-between pt-3">
+          {/* Logo */}
+          <Link
+            to="/"
+            className="col-8 col-md-3 d-flex flex-row align-items-center logo"
+          >
+            <img src={images.Logo} alt=" Wolf Pack Logo" />
+            <h2> WolfPack Herd </h2>
+          </Link>
+          <div
+            className={` col-12 col-9 d-flex flex-column flex-lg-row ${
+              navbar ? " displayNav" : "navMove"
+            }`}
+          >
+            <aside className="col-12 col-lg-10 d-flex flex-column flex-lg-row  ">
+              {/* nav Links */}
+              <section className="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-end ">
+                {/* explore */}
+                <div className=" nav-items d-flex flex-column ">
+                  <p onClick={handleExploreDropdown}>
+                    Explore <BsChevronDown className="icon" />
+                  </p>
+                  <div
+                    className={`dropdown-lists ${
+                      dropDownExplore
+                        ? "show-dropdown-lists"
+                        : "hide-dropdown-lists"
+                    }`}
+                  >
+                    {NavLinks[0].explore.map((item) => (
+                      <Link
+                        onClick={handleNav}
+                        className="dropdown-list-items"
+                        to={item.url}
+                      >
+                        <img src={item.icon} alt="" /> {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* stats */}
-              <div className=" nav-items d-flex flex-column ">
-                <p onClick={handleStatsDropdown}>
+                {/* stats */}
+                <div className=" nav-items d-flex flex-column ">
+                  <p onClick={handleStatsDropdown}>
+                    {" "}
+                    Stats <BsChevronDown className="icon" />{" "}
+                  </p>
+                  <div
+                    className={`dropdown-lists ${
+                      dropDownStats
+                        ? "show-dropdown-lists"
+                        : "hide-dropdown-lists"
+                    }`}
+                  >
+                    {NavLinks[0].stats.map((item) => (
+                      <Link
+                        onClick={handleNav}
+                        className="dropdown-list-items"
+                        to={item.url}
+                      >
+                        <img src={item.icon} alt="" /> {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Asset */}
+                <div className=" nav-items d-flex flex-column ">
+                  <p onClick={handleAssetDropdown}>
+                    {" "}
+                    Asset <BsChevronDown className="icon" />{" "}
+                  </p>
+                  <div
+                    className={`dropdown-lists ${
+                      dropDownAsset
+                        ? "show-dropdown-lists"
+                        : "hide-dropdown-lists"
+                    }`}
+                  >
+                    {NavLinks[0].asset.map((item) => (
+                      <Link
+                        onClick={handleNav}
+                        className="dropdown-list-items"
+                        to={item.url}
+                      >
+                        <img src={item.icon} alt="" /> {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* profile and btn */}
+              <section className="col-12 col-lg-4 d-flex flex-column flex-lg-row justify-content-around align-items-center">
+                <div>
                   {" "}
-                  Stats <BsChevronDown className="icon" />{" "}
-                </p>
-                <div
-                  className={`dropdown-lists ${
-                    dropDownStats
-                      ? "show-dropdown-lists"
-                      : "hide-dropdown-lists"
-                  }`}
-                >
-                  {NavLinks[0].stats.map((item) => (
-                    <Link className="dropdown-list-items" to="/mintnft">
-                      <img src={item.icon} alt="" /> {item.name}
-                    </Link>
-                  ))}
+                  <img src={images.Profile} alt="" />{" "}
                 </div>
-              </div>
-
-              {/* Asset */}
-              <div className=" nav-items d-flex flex-column ">
-                <p onClick={handleAssetDropdown}>
+                <div onClick={handleConnectWallet}>
                   {" "}
-                  Asset <BsChevronDown className="icon" />{" "}
-                </p>
-                <div
-                  className={`dropdown-lists ${
-                    dropDownAsset
-                      ? "show-dropdown-lists"
-                      : "hide-dropdown-lists"
-                  }`}
-                >
-                  {NavLinks[0].asset.map((item) => (
-                    <Link className="dropdown-list-items" to="/mintnft">
-                      <img src={item.icon} alt="" /> {item.name}
-                    </Link>
-                  ))}
+                  <Link className="Btn btn-black btn-normal m-3 d-flex flex-row align-items-center">
+                    <img src={images.Walleticon} alt="" />
+                    Connect Wallet{" "}
+                  </Link>
                 </div>
-              </div>
-            </section>
+              </section>
+            </aside>
+          </div>
+          {/* Hambuger icon */}
+          <div onClick={handleNav} className={navbar ? "ham" : "open"}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </section>
 
-            {/* profile and btn */}
-            <section className="col-12 col-lg-4 d-flex flex-column flex-lg-row justify-content-around align-items-center">
-              <div>
-                {" "}
-                <img src={images.Profile} alt="" />{" "}
-              </div>
-              <div onClick={handleConnectWallet}>
-                {" "}
-                <Link className="Btn btn-black btn-normal m-3 d-flex flex-row align-items-center">
-                  <img src={images.Walleticon} alt="" />
-                  Connect Wallet{" "}
-                </Link>
-              </div>
-            </section>
-          </aside>
-        </div>
-        {/* Hambuger icon */}
-        <div onClick={handleNav} className={navbar ? "ham" : "open"}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-
-      <div className={showConnectWallet ? "d-none" : "d-block"}>
+      <div
+        className={` connect d-flex flex-column align-items-end ${
+          showConnectWallet ? "d-none" : "d-block"
+        }`}
+      >
+        <h2 onClick={handleConnectWallet} className="X">
+          {" "}
+          X{" "}
+        </h2>
         <ConnectWallet />
       </div>
-    </section>
+    </div>
   );
 }
 

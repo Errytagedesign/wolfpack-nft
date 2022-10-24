@@ -31,7 +31,7 @@ function ConnectWallet() {
     <div className="popUp-container">
       <section className="d-flex flex-wrap justify-content-between">
         {WalletData.map((item, i) => (
-          <article key={i} className="text-center col-6 ">
+          <article key={i} className="text-center col-12 col-lg-6 ">
             <img src={item.imageUrl} alt="wallet icons" />
             <h2> {item.name} </h2>
             <p> {item.desc} </p>
