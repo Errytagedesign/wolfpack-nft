@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // components
-import { NavBar, HomePage, Footer } from "./components/exports/allComps";
+import { NavBar, HomePage, Footer, Fab } from "./components/exports/allComps";
 
 // style
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -23,6 +23,11 @@ function App() {
         <header>
           <NavBar />
         </header>
+      </Router>
+      <Router>
+        <div className="fab">
+          <Fab />
+        </div>
       </Router>
       <main>
         <Router>

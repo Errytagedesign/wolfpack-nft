@@ -1,0 +1,42 @@
+.fab-container {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  z-index: 300;
+  //   background-color: red;
+  max-height: 260px;
+
+  //   @media screen and (max-width: 890px) {
+  //     top: 1000px;
+  //   }
+
+  img {
+    width: 60px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .fab-items-container {
+    display: grid;
+    place-items: center;
+
+    position: relative;
+
+    .fab-items-open {
+      position: relative;
+      transition: all 0.5s ease-in-out;
+      max-height: max-content;
+    }
+    .fab-items-close {
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+    }
+
+    img {
+      width: 80px;
+      cursor: pointer;
+      margin: auto;
+    }
+  }
+}

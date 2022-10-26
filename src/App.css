@@ -144,6 +144,19 @@ header {
   z-index: 200;
 }
 
+/* .fab {
+  position: fixed;
+  top: 500px;
+  right: 20px;
+  z-index: 300;
+}
+
+@media screen and (max-width: 890px) {
+  .fab {
+    top: 1000px;
+  }
+} */
+
 a {
   text-decoration: none;
   color: var(--white);

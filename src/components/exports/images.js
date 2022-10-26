@@ -84,9 +84,19 @@ import metamask from "../../assets/images/metamask.png";
 import coinbase from "../../assets/images/coinbase.png";
 import walletconnect from "../../assets/images/walletconnect.png";
 
+// FAB
+import cancel from "../../assets/images/cancel.svg";
+import plus from "../../assets/images/plus.svg";
+import faq from "../../assets/images/faq.svg";
+import contact from "../../assets/images/contact.svg";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   walletconnect,
+  cancel,
+  faq,
+  contact,
+  plus,
   coinbase,
   metamask,
   binance,
