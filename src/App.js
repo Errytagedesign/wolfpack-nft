@@ -25,7 +25,7 @@ function App() {
   }, [AOS]);
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
         <header>
           <NavBar />
         </header>
@@ -34,12 +34,18 @@ function App() {
         <div className="fab">
           <Fab />
         </div>
-      </Router>
+      </Router> */}
       <main>
         <Router>
+          <header>
+            <NavBar />
+          </header>
+          <div className="fab">
+            <Fab />
+          </div>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="explore" element={<Explore />} />
+            <Route path="/explore" element={<Explore />} />
           </Routes>
         </Router>
       </main>
