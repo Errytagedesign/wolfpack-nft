@@ -45,7 +45,7 @@ function NavBar() {
   const NavLinks = [
     {
       explore: [
-        { name: "Mint NFT", icon: images.MintNft, url: "/mintnft" },
+        { name: "Mint NFT", icon: images.MintNft, url: "/explore" },
         { name: "Ivory Savings", icon: images.NfcSaving, url: "/ivorysavings" },
         {
           name: "Crypto Gift Card",
