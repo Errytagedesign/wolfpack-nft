@@ -31,7 +31,11 @@ function HeroSection() {
             Discover valuable <span> Digital Collectibles </span>with
             WolfPackHerd
           </h2>
-          <Link data-aos="fade-left" className="Btn btn-black btn-normal">
+          <Link
+            data-aos="fade-left"
+            className="Btn btn-black btn-normal"
+            to="/explore"
+          >
             {" "}
             Explore{" "}
           </Link>

@@ -109,8 +109,9 @@ function NavBar() {
                         : "hide-dropdown-lists"
                     }`}
                   >
-                    {NavLinks[0].explore.map((item) => (
+                    {NavLinks[0].explore.map((item, idx) => (
                       <Link
+                        key={idx}
                         onClick={handleNav}
                         className="dropdown-list-items"
                         to={item.url}
@@ -134,8 +135,9 @@ function NavBar() {
                         : "hide-dropdown-lists"
                     }`}
                   >
-                    {NavLinks[0].stats.map((item) => (
+                    {NavLinks[0].stats.map((item, idx) => (
                       <Link
+                        key={idx}
                         onClick={handleNav}
                         className="dropdown-list-items"
                         to={item.url}
@@ -159,8 +161,9 @@ function NavBar() {
                         : "hide-dropdown-lists"
                     }`}
                   >
-                    {NavLinks[0].asset.map((item) => (
+                    {NavLinks[0].asset.map((item, idx) => (
                       <Link
+                        key={idx}
                         onClick={handleNav}
                         className="dropdown-list-items"
                         to={item.url}

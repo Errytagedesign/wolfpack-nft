@@ -1,0 +1,90 @@
+.mint-card-container {
+  // border: solid 5px var(--trans-white);
+  border-radius: 20px;
+  background-color: var(--trans-white);
+  padding: 13px;
+  &:hover {
+    box-shadow: 5px 5px 23px rgba(0, 0, 0, 0.5);
+  }
+
+  .buy {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    a {
+      color: var(--black);
+    }
+  }
+
+  .hearted {
+    color: red;
+    transition: all 0.5s ease-in-out;
+    animation: hearted 0.5s;
+
+    @keyframes hearted {
+      0% {
+        transform: scale(3.5);
+        color: var(--light-green);
+      }
+
+      50% {
+        transform: scale(2.2);
+        color: yellow;
+      }
+
+      75% {
+        transform: scale(1.2);
+        color: white;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+  // .heart {
+  //   color: red;
+  // }
+
+  .mint-card-image {
+    // padding: 20px;
+    // overflow: hidden;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .mint-card-title {
+    // margin: 20px 10px;
+
+    // h3 {
+    //   color: var(--light-green);
+    // }
+
+    h5 {
+      font-size: 14px;
+    }
+
+    // p {
+    //   font-size: 14px;
+    //   line-height: 21.7px;
+    //   font-weight: 500;
+    //   margin-bottom: 7px;
+    // }
+    .mint-card-details {
+      span {
+        font-size: 18px;
+        font-weight: 400;
+        // margin-bottom: 7px;
+        strong {
+          font-weight: 600;
+          // color: var(--light-green);
+        }
+      }
+    }
+  }
+}

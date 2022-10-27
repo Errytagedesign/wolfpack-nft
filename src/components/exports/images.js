@@ -50,6 +50,24 @@ import nft17 from "../../assets/images/nft17.png";
 import nft18 from "../../assets/images/nft18.png";
 import nft19 from "../../assets/images/nft19.png";
 
+// MINT CARDS SLIDER
+import mint01 from "../../assets/images/mint01.png";
+import mint02 from "../../assets/images/mint02.png";
+import mint03 from "../../assets/images/mint03.png";
+import mint04 from "../../assets/images/mint04.png";
+import mint05 from "../../assets/images/mint05.png";
+import mint06 from "../../assets/images/mint06.png";
+import mint07 from "../../assets/images/mint07.png";
+import mint08 from "../../assets/images/mint08.png";
+import mint09 from "../../assets/images/mint09.png";
+import mint10 from "../../assets/images/mint10.png";
+import mint11 from "../../assets/images/mint11.png";
+import mint12 from "../../assets/images/mint12.png";
+import mint13 from "../../assets/images/mint13.png";
+import mint14 from "../../assets/images/mint14.png";
+import mint15 from "../../assets/images/mint15.png";
+import mint16 from "../../assets/images/mint16.png";
+
 // Landingpage
 import background from "../../assets/images/Backgroung-collection.png";
 import emptyframe from "../../assets/images/emptyframe.png";
@@ -90,9 +108,13 @@ import plus from "../../assets/images/plus.svg";
 import faq from "../../assets/images/faq.svg";
 import contact from "../../assets/images/contact.svg";
 
+// FAB
+import elephantExplore from "../../assets/images/elephant-explore.png";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   walletconnect,
+  elephantExplore,
   cancel,
   faq,
   contact,
@@ -144,6 +166,22 @@ export default {
   nft17,
   nft18,
   nft19,
+  mint01,
+  mint02,
+  mint03,
+  mint04,
+  mint05,
+  mint06,
+  mint07,
+  mint08,
+  mint09,
+  mint10,
+  mint11,
+  mint12,
+  mint13,
+  mint14,
+  mint15,
+  mint16,
   Circle1,
   Circle2,
   Circle3,

@@ -1,0 +1,88 @@
+.explore {
+  background: #0b0b0b url("../../assets/images/hero-bg.svg") no-repeat top;
+  background-size: cover;
+  padding-top: 100px;
+
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+
+  .explore-hero {
+    position: relative;
+    padding: 100px 20px;
+    // margin-bottom: 100px;
+
+    .Elephant {
+      img {
+        width: 100%;
+      }
+    }
+
+    .title-container {
+      position: absolute;
+
+      bottom: 400px;
+      p {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        // padding: 2em 0;
+        color: var(--white);
+
+        span {
+          color: var(--light-green);
+        }
+      }
+
+      @media screen and (max-width: 890px) {
+        bottom: 50px;
+        margin-left: 20px;
+
+        h2 {
+          font-size: 35px;
+          // margin: 0.5em 0 1em;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        bottom: 0;
+        h2 {
+          font-size: 15px;
+          // margin: 0.5em 0 1em;
+        }
+        p {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  .nft-container {
+    background-color: var(--dark-green);
+    padding: 100px 72px;
+
+    @media screen and (max-width: 900px) {
+      background-color: transparent;
+      padding: 100px 22px;
+    }
+
+    article {
+      h2 {
+        color: var(--light-green);
+      }
+    }
+  }
+
+  .mint-container {
+    padding: 70px 50px;
+    background-color: #0b0b0b;
+  }
+}
