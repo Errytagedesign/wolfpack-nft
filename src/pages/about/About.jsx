@@ -1,6 +1,10 @@
 import React from "react";
+import { FaLinkedin, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import images from "../../components/exports/images";
 import "./About.scss";
+
+import { TeamData } from "./TeamData";
 
 function About() {
   return (
@@ -98,11 +102,13 @@ function About() {
             donations to the International Elephant Foundation.
             <br /> <br />
             Your donation will go towards creating a sustainable future for
-            elephants. IEF generates and effectively invests resources to
-            support elephant conservation, education, research, and management
-            programs worldwide. For every donation, you get an NFT in return for
-            your generous contribution. Help us save Elephants from probable
-            extinction before it becomes inevitable
+            elephants. <br />
+            IEF generates and effectively invests resources to support elephant
+            conservation, education, research, and management programs
+            worldwide. For every donation, you get an NFT in return for your
+            generous contribution. <br />
+            Help us save Elephants from probable extinction before it becomes
+            inevitable
             <br /> <br />
             If you like our project and want to support our work, you can donate
             here.
@@ -121,6 +127,52 @@ function About() {
               rLBS2LytjifykTytPQeqDdvFCDnLG3nunq{" "}
             </strong> <br /> <br />{" "}
           </p>
+        </section>
+
+        {/* Our Team */}
+        <section className="d-flex flex-column team-container text-center">
+          <div className="team-header">
+            {" "}
+            <h3> Meet Our Team </h3>
+            <h4> A park of great men and women </h4>
+          </div>
+
+          <section className="d-flex flex-wrap">
+            {TeamData.map((team, idx) => (
+              <article className="team-card-container col-6 col-md-4 col-lg-3 p-2">
+                <section key={idx} className="team">
+                  <div className="team-card">
+                    <img
+                      className="team-image col-10 m-3"
+                      src={team.imageUrl}
+                      alt=""
+                    />
+                    <h3> {team.name} </h3>
+                    <p> {team.role} </p>
+                    <small> {team.small ? team.small : ""} </small>
+                  </div>{" "}
+                </section>
+                <div className="social d-flex flex-row justify-content-between">
+                  <a href={team.twLink} target="_blank" rel="noreferrer">
+                    {" "}
+                    <FaTwitter />{" "}
+                  </a>{" "}
+                  <a href={team.tgramLink} target="_blank" rel="noreferrer">
+                    {" "}
+                    <FaTelegramPlane />{" "}
+                  </a>{" "}
+                  <a href={team.linkedLink} target="_blank" rel="noreferrer">
+                    {" "}
+                    <FaLinkedin />{" "}
+                  </a>{" "}
+                  <a href={team.emailLink} target="_blank" rel="noreferrer">
+                    {" "}
+                    <MdEmail />{" "}
+                  </a>{" "}
+                </div>{" "}
+              </article>
+            ))}
+          </section>
         </section>
       </div>
     </main>
