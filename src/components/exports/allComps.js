@@ -6,3 +6,4 @@ export { default as Fab } from "../constants/fab/Fab";
 // Pages
 export { default as HomePage } from "../../pages/home/HomePage";
 export { default as Explore } from "../../pages/explore/Explore";
+export { default as About } from "../../pages/about/About";

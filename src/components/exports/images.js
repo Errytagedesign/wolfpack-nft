@@ -102,6 +102,28 @@ import metamask from "../../assets/images/metamask.png";
 import coinbase from "../../assets/images/coinbase.png";
 import walletconnect from "../../assets/images/walletconnect.png";
 
+// About
+import sharedgoal from "../../assets/images/sharedgoal.png";
+import Illustrator from "../../assets/images/Illustrator.png";
+import think from "../../assets/images/think.png";
+import team1 from "../../assets/images/team1.png";
+import team2 from "../../assets/images/team2.png";
+import team3 from "../../assets/images/team3.png";
+import team4 from "../../assets/images/team4.png";
+import team5 from "../../assets/images/team5.png";
+import team6 from "../../assets/images/team6.png";
+import team7 from "../../assets/images/team7.png";
+import team8 from "../../assets/images/team8.png";
+import team9 from "../../assets/images/team9.png";
+import team10 from "../../assets/images/team10.png";
+import team11 from "../../assets/images/team11.png";
+import team12 from "../../assets/images/team12.png";
+import team13 from "../../assets/images/team13.png";
+import team14 from "../../assets/images/team14.png";
+import team15 from "../../assets/images/team15.png";
+import team16 from "../../assets/images/team16.png";
+import team17 from "../../assets/images/team17.png";
+
 // FAB
 import cancel from "../../assets/images/cancel.svg";
 import plus from "../../assets/images/plus.svg";
@@ -113,6 +135,26 @@ import elephantExplore from "../../assets/images/elephant-explore.png";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  sharedgoal,
+  Illustrator,
+  think,
+  team1,
+  team2,
+  team3,
+  team4,
+  team5,
+  team6,
+  team7,
+  team8,
+  team9,
+  team10,
+  team11,
+  team12,
+  team13,
+  team14,
+  team15,
+  team16,
+  team17,
   walletconnect,
   elephantExplore,
   cancel,

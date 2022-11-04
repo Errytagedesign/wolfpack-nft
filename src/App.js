@@ -9,6 +9,7 @@ import {
   Footer,
   Fab,
   Explore,
+  About,
 } from "./components/exports/allComps";
 
 // style
@@ -46,14 +47,13 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path="/about" element={<About />} />
           </Routes>
+          <footer>
+            <Footer />
+          </footer>
         </Router>
       </main>
-      <Router>
-        <footer>
-          <Footer />
-        </footer>
-      </Router>
     </div>
   );
 }

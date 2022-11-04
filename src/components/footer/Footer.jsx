@@ -19,7 +19,10 @@ function Footer() {
       <main className="d-flex flex-column flex-lg-row  justify-content-between align-items-center align-items-lg-start ">
         {/* Logo */}
         <section className="col-12 col-md-8 logo col-lg-4 d-flex flex-column text-center text-lg-start mx-auto">
-          <div className="d-flex flex-row col-10 col-md-6 col-lg-12 mx-auto align-items-center ">
+          <Link
+            to="/"
+            className="d-flex flex-row col-10 col-md-6 col-lg-12 mx-auto align-items-center "
+          >
             <div>
               {" "}
               <img
@@ -29,7 +32,7 @@ function Footer() {
               />{" "}
             </div>
             <h2> WolfPack Herd </h2>{" "}
-          </div>
+          </Link>
           <p>
             {" "}
             Discover valuable digital collectibies with WolfPackHerd. Buy, sell,
