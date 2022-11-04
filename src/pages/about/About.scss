@@ -149,5 +149,22 @@
         }
       }
     }
+
+    .job-container {
+      margin-top: 100px;
+      text-align: center;
+      border: solid 2px var(--light-green);
+      border-radius: 20px;
+      padding: 30px;
+
+      p {
+        margin: 50px auto;
+      }
+
+      .Btn {
+        width: 300px;
+        padding: 15px 40px;
+      }
+    }
   }
 }

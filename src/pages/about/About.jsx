@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 import images from "../../components/exports/images";
 import "./About.scss";
 
@@ -90,7 +91,7 @@ function About() {
           </aside>
         </section>
 
-        {/* support us*/}
+        {/* Support us*/}
         <section className="d-flex flex-column support-container">
           <h4>Support Us </h4>
 
@@ -173,6 +174,22 @@ function About() {
               </article>
             ))}
           </section>
+        </section>
+
+        {/* Join us */}
+        <section className="d-flex flex-column job-container">
+          <div className="d-flex flex-column align-items-center">
+            <h4> Join Us at Wolfpackherd </h4>
+            <p>
+              At Wolfpackherd, we give people the freedom to own their
+              decisions, collaborate openly, and serve our users with passion
+              and integrity. Join the Wolfpachrd team today and work with some
+              of the world’s most talented, hardworking, and passionate people.
+            </p>
+            <Link className="Btn btn-black" to="">
+              View Job Openings
+            </Link>{" "}
+          </div>
         </section>
       </div>
     </main>
