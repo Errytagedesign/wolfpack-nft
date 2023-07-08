@@ -1,14 +1,14 @@
-import React from "react";
-import "./HomePage.scss";
+import React from 'react';
+import './HomePage.scss';
 
-import Slider from "react-slick";
+import Slider from 'react-slick';
 // import { motion } from "framer-motion";
 
 // comps
-import { HeroSection } from "../../components/exports/allComps";
-import images from "../../components/exports/images";
-import NftCollection from "../../components/constants/nftcollection/NftCollection";
-import { Link } from "react-router-dom";
+import { HeroSection } from '../../components/exports/allComps';
+import images from '../../components/exports/images';
+import NftCollection from '../../components/constants/nftcollection/NftCollection';
+import { Link } from 'react-router-dom';
 
 const settings = {
   dots: false,
@@ -33,6 +33,34 @@ const settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+  ],
+};
+
+const settingMaker = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 900,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
         initialSlide: 2,
       },
     },
@@ -73,57 +101,52 @@ const nftCardsImages = [
 const NftCards = [
   {
     id: 1,
-    title: "Alien Trunk NFT",
-    desc: "Alien Trunk NFT is the leader of the pack and the rarest NFT in our collection. Holding this NFT gives users access to whitelist spots on all future projects.",
+    title: 'Alien Trunk Metacards',
+    desc: 'Alien Trunk Metacard is the leader of the pack and the rarest Meta in our collection. Holding this Metacard gives users access to whitelist spots on all future projects.',
 
-    qtyValue: "2000",
-    floorPrice: "$1000 BUSD",
-
-    apyValue: "%96",
+    qtyValue: '2000',
+    floorPrice: '0.250 BNB',
+    apyValue: '50%/50%',
     pic: images.alien,
   },
   {
     id: 2,
-    title: "Armor Trunk NFT",
-    desc: "Armor Trunk NFT is the second most valuable NFT in our collection and it bequeaths holders' preferences for whitelist spots on future projects after Alien Trunk Holders.",
+    title: 'Armor Trunk Metacards',
+    desc: "Armor Trunk Metacard is the second most valuable Meta in our collection and it bequeaths holders' preferences for whitelist spots on future projects after Alien Trunk Holders.",
 
-    qtyValue: "3000",
-    floorPrice: "$500 BUSD",
-
-    apyValue: "%72",
+    qtyValue: '3000',
+    floorPrice: '0.250 BNB',
+    apyValue: '50%/50%',
     pic: images.armor,
   },
   {
     id: 3,
-    title: "eTrunk NFT",
-    desc: "eTrunk NFT is the most numerous NFT in our collection and opens holders to exclusive airdrops, dividends from yields and nodes, and more.",
+    title: 'eTrunk Metacards',
+    desc: 'eTrunk Meta is the most numerous Metacard in our collection and opens holders to exclusive airdrops & access to yield staking.',
 
-    qtyValue: "5000",
-    floorPrice: "$250 BUSD",
-
-    apyValue: "%60",
+    qtyValue: '5000',
+    floorPrice: '0.250 BNB',
+    apyValue: '35%/50%',
     pic: images.etrunk,
   },
   {
     id: 4,
-    title: "War Trunk NFT",
-    desc: "Holding this NFT opens users to juicy discounts, exclusive airdrops, and more.    ",
+    title: 'War Trunk Metacards',
+    desc: 'War Trunk Metacards are veteran and holding this Metacard opens users to juicy discounts, exclusive airdrops & access to yield staking.',
 
-    qtyValue: "2000",
-    floorPrice: "$125 BUSD",
-
-    apyValue: "%48",
+    qtyValue: '1000',
+    floorPrice: '0.250 BNB',
+    apyValue: '25%/50%',
     pic: images.war,
   },
   {
     id: 5,
-    title: "WWar II Trunk NFT",
-    desc: "Holding this NFT opens users to juicy discounts, exclusive airdrops, and more.    ",
+    title: 'WWar II Trunk Metacards',
+    desc: 'Wolrd War 2 Trunk Metacards are first defenders and holding this Metacard opens users to juicy discounts, exclusive airdrops & access to yield staking.',
 
-    qtyValue: "2000",
-    floorPrice: "$65 BUSD",
-
-    apyValue: "No Earning",
+    qtyValue: '2000',
+    floorPrice: '0.250 BNB',
+    apyValue: '10%/50%',
     pic: images.warii,
   },
 ];
@@ -137,7 +160,6 @@ const partnersLogo = [
   { logo: images.partners6 },
   { logo: images.partners7 },
   { logo: images.partners8 },
-  { logo: images.partners9 },
 ];
 
 const makersLogo = [
@@ -151,17 +173,17 @@ const makersLogo = [
 
 function HomePage() {
   return (
-    <div className="home d-flex flex-column">
+    <div className='home d-flex flex-column'>
       <HeroSection />
 
       {/* Start Web slider section  */}
-      <section className="slider home-containers d-none d-lg-block ">
-        <Slider className="" {...settings}>
+      <section className='slider home-containers d-none d-lg-block '>
+        <Slider className='' {...settings}>
           {nftCardsImages.map((nft) => (
             <img
-              className="col-12 mx-auto"
+              className='col-12 mx-auto'
               src={nft.pic}
-              alt="wolfpackherd nft cards"
+              alt='wolfpackherd nft cards'
             />
           ))}
         </Slider>
@@ -170,28 +192,31 @@ function HomePage() {
 
       {/* Start Wolfpack descriptions section  */}
 
-      <section className="wolf-pack home-containers d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <section className='wolf-pack home-containers d-flex flex-column flex-md-row align-items-center justify-content-between'>
         <article
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          className="col-12 col-md-7 text-center text-md-start"
+          data-aos='fade-left'
+          data-aos-duration='2000'
+          className='col-12 col-md-7 text-center text-md-start'
         >
-          <h2> WolfPackHerd ! an NFT and More </h2>
+          <h2> WolfPackHerd! Creating A High-End Marketplace </h2>
           <p>
-            {" "}
-            We are building an all-class asset that is operated on the BNB
-            Smartchain by everyday people and offers scalability,
-            sustainability, and trustability.{" "}
+            {' '}
+            A comprehensive NFT/Metacard Marketplace that operates on multiple
+            chains and collects trading fees. The fees are shared 50/50 between
+            Trunk Metacard holders and the DAO Staking Treasury Wallet, offering
+            potential 25x returns when trading volume reaches $150,000,000. The
+            DAO Staking Treasury Wallet offers a strategic APY earnings from
+            trading fees & listed revenue's to metacard holders.{' '}
           </p>
         </article>
 
         <aside
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          className="col-12 col-md-4 text-center"
+          data-aos='fade-right'
+          data-aos-duration='2000'
+          className='col-12 col-md-4 text-center'
         >
-          {" "}
-          <img className="col-8 mx-auto" src={images.emptyframe} alt="" />{" "}
+          {' '}
+          <img className='col-8 mx-auto' src={images.emptyframe} alt='' />{' '}
         </aside>
       </section>
 
@@ -199,21 +224,21 @@ function HomePage() {
 
       {/* Start Wolfpack NFT Collection section  */}
 
-      <section className="nft-collections home-containers d-flex flex-column justify-content-between">
-        <article className="col-12 text-center text-lg-start">
-          <h2> NFT’s TRUNK Collection </h2>
+      <section className='nft-collections home-containers d-flex flex-column justify-content-between'>
+        <article className='col-12 text-center text-lg-start'>
+          <h2> TRUNK Metacard Collections </h2>
           <p>
-            {" "}
-            WolfPackHerd consists of 5 distinctive NFT collections that can
+            {' '}
+            WolfPackHerd consists of 5 distinctive meta collections that can
             mutate when bridging to other networks making them rarer. All our
-            NFTs are unique but bequeath users with different levels of
-            opportunity.{" "}
+            metacards are unique but bequeath users with different levels of
+            opportunity.{' '}
           </p>
         </article>
 
-        <section className="d-flex flex-wrap col-12 d-none d-lg-flex">
+        <section className='d-flex flex-wrap col-12 d-none d-lg-flex'>
           {NftCards.map((card) => (
-            <div className=" p-2 col-4">
+            <div className=' p-2 col-4'>
               <NftCollection
                 key={card.id}
                 title={card.title}
@@ -229,9 +254,9 @@ function HomePage() {
 
         {/* Mobile Slider */}
 
-        <Slider className="d-block d-lg-none" {...NftMobileSliderSettings}>
+        <Slider className='d-block d-lg-none' {...NftMobileSliderSettings}>
           {NftCards.map((card) => (
-            <div className=" p-2 col-12 col-md-4">
+            <div className=' p-2 col-12 col-md-4'>
               <NftCollection
                 key={card.id}
                 title={card.title}
@@ -250,52 +275,51 @@ function HomePage() {
 
       {/* Start of DOnate  section  */}
 
-      <section className="donate d-flex flex-column flex-lg-row align-items-center justify-content-between justify-content-lg-around">
-        <div className="col-12 col-lg-6 order-1 order-lg-0 ">
-          {" "}
+      <section className='donate d-flex flex-column flex-lg-row align-items-center justify-content-between justify-content-lg-around'>
+        <div className='col-12 col-lg-6 order-1 order-lg-0 '>
+          {' '}
           <img
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            data-aos='zoom-in'
+            data-aos-duration='2000'
             src={images.Elephant}
-            alt=""
-          />{" "}
-          <div className="d-block mt-5 text-center d-lg-none">
+            alt=''
+          />{' '}
+          <div className='d-block mt-5 text-center d-lg-none'>
             <Link
-              data-aos="fade-left"
-              data-aos-duration="2000"
-              className="Btn btn-black btn-normal"
+              data-aos='fade-left'
+              data-aos-duration='2000'
+              className='Btn btn-black btn-normal'
             >
-              {" "}
-              Donate{" "}
+              {' '}
+              Donate{' '}
             </Link>
           </div>
         </div>
-        <div className="donate-title d-flex order-0 order-lg-1 flex-column col-12 col-lg-5 mb-5 mb-lg-0">
-          {" "}
-          <h3
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            className="heading-medium"
+        <div className='donate-title d-flex order-0 order-lg-1 flex-column col-12 col-lg-5 mb-5 mb-lg-0'>
+          {' '}
+          {/* <h3
+            data-aos='fade-right'
+            data-aos-duration='2000'
+            className='heading-medium'
           >
-            {" "}
-            SAVE THE ELEPHANT{" "}
-          </h3>
-          <p data-aos="fade-right" data-aos-duration="2000">
-            {" "}
-            A huge part of this project is our donation towards Saving Elephants
-            and Habitat Worldwide. <br /> We believe in creating a sustainable
-            future where elephants can thrive. Hence, we urge you to join us in
-            making donations to the International Elephant Foundation. Your
-            donation will go towards creating a sustainable future for
-            elephants. IEF generates and effectively invests resources to
-            support elephant conservation, education, research, and management
-            programs worldwide. Help us save Elephants from probable extinction
-            before it becomes inevitable
-          </p>{" "}
-          <div className="d-none d-lg-block">
-            <Link data-aos="fade-left" className="Btn btn-black btn-normal">
-              {" "}
-              Donate{" "}
+            {' '}
+            SAVE THE ELEPHANT{' '}
+          </h3> */}
+          <p data-aos='fade-right' data-aos-duration='2000'>
+            {' '}
+            Our marketplace will be designed to leverage the advanced features
+            of the ERC-6551 token standard. This standard provides NFTs with a
+            new identity in the world of finance, enabling engaging performance
+            and unlocking new possibilities for asset utilization and value
+            creation.
+            <br /> Trading fees shared with early backers and MetaCard holders
+            that contributes to development to benefit from marketplace success
+            (12000 Spots).
+          </p>{' '}
+          <div className='d-none d-lg-block'>
+            <Link data-aos='fade-left' className='Btn btn-black btn-normal'>
+              {' '}
+              WolfPackHerd High-End Marketplace For Metacards{' '}
             </Link>
           </div>
         </div>
@@ -305,40 +329,20 @@ function HomePage() {
 
       {/* Start of Partners  section  */}
 
-      <section className="partners home-containers d-flex flex-column align-items-center justify-content-center">
-        <h4 className="mb-5"> Our Partners </h4>
-        <div className="d-flex flex-wrap align-items-center justify-content-center">
+      <section className='partners home-containers d-flex flex-column align-items-center justify-content-center'>
+        <h4 className='mb-5'> Our Connections </h4>
+        <div className='d-flex flex-wrap align-items-center justify-content-center'>
           {partnersLogo.map((partner) => (
             <div
-              data-aos="flip-left"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
-              className="col-3 col-md-2"
+              data-aos='flip-left'
+              data-aos-easing='ease-out-cubic'
+              data-aos-duration='2000'
+              className='col-3 col-md-2'
             >
               <img
-                className="col-12 mx-auto"
+                className='col-12 mx-auto'
                 src={partner.logo}
-                alt="wolfpackherd nft cards"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="partners home-containers d-flex flex-column align-items-center justify-content-center">
-        <h4 className="mb-5"> Yield Makers </h4>
-        <div className="d-flex flex-wrap align-items-center justify-content-center">
-          {makersLogo.map((partner) => (
-            <div
-              data-aos="flip-left"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
-              className="col-3 col-md-2"
-            >
-              <img
-                className="col-12 mx-auto"
-                src={partner.logo}
-                alt="wolfpackherd nft cards"
+                alt='wolfpackherd nft cards'
               />
             </div>
           ))}
@@ -350,41 +354,56 @@ function HomePage() {
       {/* Start of Newsletter  section  */}
 
       <section
-        data-aos="zoom-in"
-        className="newsletter home-containers d-flex flex-column align-items-center"
+        data-aos='zoom-in'
+        className='newsletter home-containers d-flex flex-column align-items-center'
       >
-        <article className="d-flex flex-column flex-lg-row justify-content-between text-center text-lg-start">
+        <article className='d-flex flex-column flex-lg-row justify-content-between text-center text-lg-start'>
           <div
-            data-aos="fade-left"
-            data-aos-duration="2000"
-            className="col-12 col-lg-4"
+            data-aos='fade-left'
+            data-aos-duration='2000'
+            className='col-12 col-lg-4'
           >
             <h3> Newsletters</h3>
             <p>
-              {" "}
+              {' '}
               Don’t miss Wolfpackherd updates! Join our mailing list to stay in
-              the loop with our newest feature.{" "}
+              the loop with our newest feature.{' '}
             </p>
           </div>
 
           <div
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            className="col-12 col-lg-7"
+            data-aos='fade-right'
+            data-aos-duration='2000'
+            className='col-12 col-lg-7'
           >
             <input
-              type="email"
-              placeholder="Email"
-              className="form-control p-3"
+              type='email'
+              placeholder='Email'
+              className='form-control p-3'
             />
           </div>
         </article>
-        <div className="mt-5">
-          <Link data-aos="fade-left" className="Btn btn-black btn-normal">
-            {" "}
-            Subscribe{" "}
+        <div className='mt-5'>
+          <Link data-aos='fade-left' className='Btn btn-black btn-normal'>
+            {' '}
+            Subscribe{' '}
           </Link>
         </div>
+      </section>
+      <section className='d-flex flex-column  justify-content-center'>
+        <h4 className='mb-5 text-center'> Yield Makers </h4>
+
+        <Slider className='' {...settingMaker}>
+          {makersLogo.map((partner) => (
+            <figure className=''>
+              <img
+                className=''
+                src={partner.logo}
+                alt='wolfpackherd nft cards'
+              />
+            </figure>
+          ))}
+        </Slider>
       </section>
 
       {/* End of Newsletter  section  */}

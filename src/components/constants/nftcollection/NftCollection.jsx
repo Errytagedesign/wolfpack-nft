@@ -1,43 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 // import images from "../../exports/images";
 
 // styles
-import "./NftCollection.scss";
+import './NftCollection.scss';
 
 function NftCollection({ imageUrl, title, desc, qty, floor, apy }) {
   return (
-    <div className="nft-card-container">
+    <div className='nft-card-container'>
       <Link>
-        <div className="nft-card-image">
-          <img src={imageUrl} alt="wolfpackherd nft collections" />
+        <div className='nft-card-image'>
+          <img src={imageUrl} alt='wolfpackherd nft collections' />
         </div>
 
         <div
-          data-aos="fade-in"
-          data-aos-duration="1000"
-          className="p-3 nft-card-title"
+          data-aos='fade-in'
+          data-aos-duration='1000'
+          className='p-3 nft-card-title'
         >
-          <h3 className="heading-medium"> {title} </h3>
+          <h3 className='heading-medium'> {title} </h3>
           <p>{desc}</p>
           <div
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            className="d-flex flex-column nft-card-details"
+            data-aos='fade-in'
+            data-aos-duration='1000'
+            className='d-flex flex-column nft-card-details'
           >
-            {" "}
+            {' '}
             <span>
-              {" "}
-              Quantity: <strong> {qty} </strong>{" "}
-            </span>{" "}
+              {' '}
+              Quantity: <strong> {qty} </strong>{' '}
+            </span>{' '}
             <span>
-              {" "}
-              Floor price: <strong> {floor} </strong>{" "}
-            </span>{" "}
+              {' '}
+              Floor price: <strong> {floor} </strong>{' '}
+            </span>{' '}
             <span>
-              {" "}
-              APY Earning: <strong> {apy} </strong>{" "}
-            </span>{" "}
+              {' '}
+              Trading Fees: <strong> {apy} </strong>{' '}
+            </span>{' '}
           </div>
         </div>
       </Link>
