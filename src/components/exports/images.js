@@ -58,7 +58,11 @@ import armor from '../../assets/images/armor.png';
 import war from '../../assets/images/war.png';
 import warii from '../../assets/images/warii.png';
 import etrunk from '../../assets/images/etrunk.png';
-import Elephant from '../../assets/images/Elephant-1.png';
+import Elephant1 from '../../assets/images/Elephant-1.png';
+import Elephant2 from '../../assets/images/Elephant-2.png';
+import Elephant3 from '../../assets/images/Elephant-3.png';
+import Elephant4 from '../../assets/images/Elephant-4.png';
+import guyMan from '../../assets/images/guyMan.png';
 
 // Partners
 import partners1 from '../../assets/images/partners1.png';
@@ -99,6 +103,7 @@ export default {
   coinbase,
   metamask,
   binance,
+  guyMan,
   partners1,
   partners2,
   partners3,
@@ -114,7 +119,10 @@ export default {
   makers5,
   makers6,
   emptyframe,
-  Elephant,
+  Elephant1,
+  Elephant2,
+  Elephant3,
+  Elephant4,
   war,
   warii,
   etrunk,

@@ -67,6 +67,15 @@ const settingMaker = {
   ],
 };
 
+const setting3 = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+};
+
 const NftMobileSliderSettings = {
   dots: false,
   infinite: true,
@@ -170,6 +179,12 @@ const makersLogo = [
   { logo: images.makers5 },
   { logo: images.makers6 },
 ];
+const marketPlace = [
+  { logo: images.Elephant1 },
+  { logo: images.Elephant2 },
+  { logo: images.Elephant3 },
+  { logo: images.Elephant4 },
+];
 
 function HomePage() {
   return (
@@ -215,8 +230,14 @@ function HomePage() {
           data-aos-duration='2000'
           className='col-12 col-md-4 text-center'
         >
-          {' '}
-          <img className='col-8 mx-auto' src={images.emptyframe} alt='' />{' '}
+          <figure>
+            <img
+              className='col-8 mx-auto'
+              src={images.emptyframe}
+              alt='“CashFlow For All” Bankteller'
+            />
+            <figcaption> “CashFlow For All” Bankteller </figcaption>
+          </figure>
         </aside>
       </section>
 
@@ -278,20 +299,17 @@ function HomePage() {
       <section className='donate d-flex flex-column flex-lg-row align-items-center justify-content-between justify-content-lg-around'>
         <div className='col-12 col-lg-6 order-1 order-lg-0 '>
           {' '}
-          <img
-            data-aos='zoom-in'
-            data-aos-duration='2000'
-            src={images.Elephant}
-            alt=''
-          />{' '}
+          <Slider className='' {...setting3}>
+            {marketPlace.map((ui) => (
+              <figure className=''>
+                <img className='' src={ui.logo} alt='wolfpackherd nft cards' />
+              </figure>
+            ))}
+          </Slider>
           <div className='d-block mt-5 text-center d-lg-none'>
-            <Link
-              data-aos='fade-left'
-              data-aos-duration='2000'
-              className='Btn btn-black btn-normal'
-            >
+            <Link data-aos='fade-left' className='Btn btn-black btn-normal'>
               {' '}
-              Donate{' '}
+              WolfPackHerd High-End Marketplace For Metacards{' '}
             </Link>
           </div>
         </div>
@@ -389,6 +407,9 @@ function HomePage() {
             Subscribe{' '}
           </Link>
         </div>
+        <figure className='guyMan col-5 col-md-3'>
+          <img src={images.guyMan} alt='' />
+        </figure>
       </section>
       <section className='d-flex flex-column  justify-content-center'>
         <h4 className='mb-5 text-center'> Yield Makers </h4>
