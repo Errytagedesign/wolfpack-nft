@@ -1,11 +1,23 @@
 .home {
-  background: #000 url('../../assets/images/Backgroung-collection.png')
+  background: #000 url("../../assets/images/Backgroung-collection.png")
     no-repeat top center;
   background-size: cover;
 
   .home-containers {
     margin: 100px auto;
     width: 80%;
+
+    .desktopParagraph {
+      display: none;
+      @media screen and (min-width: 998px) {
+        display: block;
+      }
+    }
+    .mobileParagraph {
+      @media screen and (min-width: 998px) {
+        display: none;
+      }
+    }
 
     .slick-next:before,
     .slick-prev:before {
