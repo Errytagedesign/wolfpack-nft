@@ -76,11 +76,11 @@
       @media screen and (min-width: 1024px) {
         position: absolute;
         z-index: -1;
-        bottom: 0;
+        bottom: -10%;
         right: -10%;
         align-items: flex-end;
         img {
-          width: 500px;
+          width: 400px;
         }
       }
     }
