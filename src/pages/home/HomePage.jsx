@@ -164,13 +164,13 @@ const NftCards = [
 
 const partnersLogo = [
   { logo: images.partners1 },
+  { logo: images.partners5 },
   { logo: images.partners2 },
   { logo: images.partners3 },
   { logo: images.partners4 },
-  { logo: images.partners5 },
+  { logo: images.partners8 },
   { logo: images.partners6 },
   { logo: images.partners7 },
-  { logo: images.partners8 },
 ];
 
 const makersLogo = [
@@ -318,11 +318,11 @@ function HomePage() {
           </Slider>
           <div className="d-block mt-5 text-center d-lg-none">
             <Link data-aos="fade-left" className="Btn btn-black btn-normal">
-              {" "}
-              WolfPackHerd High-End Marketplace For Metacards{" "}
+              WolfPackHerd High-End Marketplace For Metacards
             </Link>
           </div>
         </div>
+        
         <div className="donate-title d-flex order-0 order-lg-1 flex-column col-12 col-lg-5 mb-5 mb-lg-0">
           <h3
             data-aos="fade-right"
@@ -354,7 +354,7 @@ function HomePage() {
 
       <section className="partners home-containers d-flex flex-column align-items-center justify-content-center">
         <h4 className="mb-5"> Our Connections </h4>
-        <div className="d-flex flex-wrap align-items-center justify-content-center">
+        <div className="d-flex flex-wrap align-items-center justify-content-center gap-2">
           {partnersLogo.map((partner) => (
             <div
               data-aos="flip-left"
