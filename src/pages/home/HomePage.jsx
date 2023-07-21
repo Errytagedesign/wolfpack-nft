@@ -9,6 +9,13 @@ import { HeroSection } from "../../components/exports/allComps";
 import images from "../../components/exports/images";
 import NftCollection from "../../components/constants/nftcollection/NftCollection";
 import { Link } from "react-router-dom";
+import {
+  nft2Image,
+  nft3Image,
+  nft4Image,
+  nft5Image,
+  nftImage,
+} from "../../assets/newImages";
 
 const settings = {
   dots: false,
@@ -110,53 +117,48 @@ const nftCardsImages = [
 const NftCards = [
   {
     id: 1,
-    title: "Alien Trunk Metacards",
-    desc: "Alien Trunk Metacard is the leader of the pack and the rarest Meta in our collection. Holding this Metacard gives users access to whitelist spots on all future projects.",
-
+    title: "50/50 Metacards",
+    desc: "50/50 Metacard is the leader of the pack and the rarest Meta in our collection. Holding this Metacard gives users access to whitelist spots on all future projects.",
     qtyValue: "2000",
     floorPrice: "0.250 BNB",
     apyValue: "50%/50%",
-    pic: images.alien,
+    pic: nftImage,
   },
   {
     id: 2,
-    title: "Armor Trunk Metacards",
-    desc: "Armor Trunk Metacard is the second most valuable Meta in our collection and it bequeaths holders' preferences for whitelist spots on future projects after Alien Trunk Holders.",
-
+    title: "50/50 Metacards",
+    desc: "Armor Trunk Metacard is the second most valuable Meta in our collection and it bequeaths holders' preferences for whitelist spots on future projects after Leaders  of the pack.",
     qtyValue: "3000",
     floorPrice: "0.250 BNB",
     apyValue: "50%/50%",
-    pic: images.armor,
+    pic: nft2Image,
   },
   {
     id: 3,
-    title: "eTrunk Metacards",
-    desc: "eTrunk Meta is the most numerous Metacard in our collection and opens holders to exclusive airdrops & access to yield staking.",
-
+    title: "35/50 Metacards",
+    desc: "35/50 Meta is the most numerous Metacard in our collection and opens holders to exclusive airdrops & access to yield staking.",
     qtyValue: "5000",
     floorPrice: "0.250 BNB",
     apyValue: "35%/50%",
-    pic: images.etrunk,
+    pic: nft3Image,
   },
   {
     id: 4,
-    title: "War Trunk Metacards",
+    title: "25/50 Metacards",
     desc: "War Trunk Metacards are veteran and holding this Metacard opens users to juicy discounts, exclusive airdrops & access to yield staking.",
-
     qtyValue: "1000",
     floorPrice: "0.250 BNB",
     apyValue: "25%/50%",
-    pic: images.war,
+    pic: nft4Image,
   },
   {
     id: 5,
-    title: "WWar II Trunk Metacards",
-    desc: "Wolrd War 2 Trunk Metacards are first defenders and holding this Metacard opens users to juicy discounts, exclusive airdrops & access to yield staking.",
-
-    qtyValue: "2000",
+    title: "10/50 Metacards",
+    desc: "Wolrd War 2 Trunk Metacards  are first defenders and holding this Metacard opens users to juicy discounts, exclusive airdrops & access to yield staking.",
+    qtyValue: "1000",
     floorPrice: "0.250 BNB",
     apyValue: "10%/50%",
-    pic: images.warii,
+    pic: nft5Image,
   },
 ];
 
@@ -213,7 +215,7 @@ function HomePage() {
           data-aos-duration="2000"
           className="col-12 col-md-7 text-center text-md-start"
         >
-          <h2> WolfPackHerd! Creating A High-End Marketplace </h2>
+          <h2>WolfPackHerd! Creating A High-End Marketplace </h2>
           <p className="desktopParagraph">
             A comprehensive NFT/Metacard Marketplace that operates on multiple
             chains and collects trading fees. The fees are shared 50/50 between
@@ -240,7 +242,9 @@ function HomePage() {
               alt="“CashFlow For All” Bankteller"
             />
             <figcaption>
-              “CashMoney For All” In Thy Blockchain Thy Trust
+              <Link to="/whitepaper">
+                “CashMoney For All” In Thy Blockchain Thy Trust
+              </Link>
             </figcaption>
           </figure>
         </aside>

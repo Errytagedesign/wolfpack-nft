@@ -82,11 +82,11 @@ function NavBar() {
             <h2> WolfPack Herd </h2>
           </Link>
           <div
-            className={` col-12 col-9 d-flex flex-column flex-lg-row ${
+            className={`col-12 col-9 d-flex flex-column flex-lg-row ${
               navbar ? ' displayNav' : 'navMove'
             }`}
           >
-            <aside className='col-12 col-lg-10 d-flex flex-column flex-lg-row  '>
+            <aside className='col-12 col-lg-10 d-flex flex-column flex-md-row'>
               {/* nav Links */}
               <section className='col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-end '>
                 {/* explore */}
@@ -180,6 +180,8 @@ function NavBar() {
               </section>
             </aside>
           </div>
+
+
           {/* Hambuger icon */}
           <div onClick={handleNav} className={navbar ? 'ham' : 'open'}>
             <span></span>
