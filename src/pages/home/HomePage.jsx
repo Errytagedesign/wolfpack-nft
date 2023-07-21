@@ -300,6 +300,12 @@ function HomePage() {
             </div>
           ))}
         </Slider>
+        <div className="nftAvatar">
+          <h4>
+            “Buy with BNB” <br /> Tap on metacards
+          </h4>
+          <img src={images.guyMan} alt="" />
+        </div>
       </section>
 
       {/* End Wolfpack NFT Collection section  */}
@@ -322,7 +328,7 @@ function HomePage() {
             </Link>
           </div>
         </div>
-        
+
         <div className="donate-title d-flex order-0 order-lg-1 flex-column col-12 col-lg-5 mb-5 mb-lg-0">
           <h3
             data-aos="fade-right"

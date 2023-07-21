@@ -41,8 +41,12 @@
   }
 
   .nft-collections {
+    position: relative;
+    z-index: 10;
     article {
-      margin-bottom: 35px;
+      @media screen and (min-width: 1024px) {
+        margin-bottom: 35px;
+      }
 
       h2 {
         font-size: 25px;
@@ -54,6 +58,30 @@
       p {
         font-size: 16px;
         font-weight: 400;
+      }
+    }
+    .nftAvatar {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 300px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: -10%;
+        align-items: flex-end;
+        img {
+          width: 500px;
+        }
       }
     }
   }
