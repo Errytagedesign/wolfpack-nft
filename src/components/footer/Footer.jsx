@@ -100,14 +100,14 @@ function Footer() {
           </div>
 
           <div className='d-flex flex-column flex-lg-row justify-content-between col-lg-6'>
-            {/* Support */}
+            {/* Support
             <aside className='d-flex col-12 col-lg-6  flex-column '>
               <h4> Support </h4>
               <Link to='/about'>Help center</Link>
               <Link to='/careers'> Account informations</Link>
               <Link to='/donate'> Settings</Link>
               <Link to='/contact'> FAQ </Link>
-            </aside>
+            </aside> */}
             <aside className='d-flex col-12 col-lg-6  flex-column '>
               <h4> Resources </h4>
               <Link to='/about'>Mint process</Link>
@@ -162,7 +162,7 @@ function Footer() {
       <article className='d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start'>
         <small>
           {' '}
-          <BiCopyright /> 2022 Wolfpackherd Network,inc. All rights reserved
+          <BiCopyright /> 2023 Wolfpackherd Network,inc. All rights reserved
         </small>
         <div className='d-flex col-8 col-md-3 mt-3 mt-lg-0 flex-row justify-content-between'>
           <small> Terms of use</small>
